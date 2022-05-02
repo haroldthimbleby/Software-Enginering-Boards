@@ -1,10 +1,10 @@
-# All data and files for the paper "Computational science reviewed: A (fixable) failure of software~engineering"
+# All data and files for the paper "Maturing the computational sciences"
 
 ## Harold Thimbleby
 
 ## [harold@thimbleby.net](mailto:harold@thimbleby.net)
 
-### 27 January 2022
+### 2 May 2022
 
 A PDF of the typeset paper is available at [reliable-models.pdf](http://www.harold.thimbleby.net/reliable-models.pdf)
 
