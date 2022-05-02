@@ -1,7 +1,8 @@
 # makefile 
 help: # list make build options
 	@echo Use make with any of these options:
-	@grep "^[-a-zA-Z]*:" makefile | sed "s/^/    /"
+	@echo
+	@grep "^[-a-zA-Z]*:" makefile | sed "s/^/    /" | sort
 	@echo
 	@echo You may like to run
 	@echo "	" make config
@@ -116,6 +117,7 @@ push: # push any changed files to github
 	rm -rf models/git-* # remove models pulled from papers repositories (they are big)
 	rm -f *.out *.log *.dvi
 	rm -f paper-seb-main.pdf paper-seb-supplementary-material.pdf
+	git push -u origin master
 	
 # This creates (and preserves) a single PDF, paper-seb.pdf, maintained at http://www.harold.thimbleby.net as reliable-models.pdf
 one-file: # make a single PDF file paper-seb.pdf (paper + appendix) all in one
@@ -132,7 +134,7 @@ zipData: # just make a zip archive of the data (as required for Dryad repository
 	rm -f dryad-data.zip
 	zip dryad-data README.md data.js
 
-plos: # expand all LaTeX files (to flatten \input etc) for PLOS, then make PDFs
+expand: # expand all LaTeX files (to flatten \input etc) for journals like PLOS, then make PDFs
 	make pdf
 	make one-file
 	node expand.js
@@ -140,6 +142,7 @@ plos: # expand all LaTeX files (to flatten \input etc) for PLOS, then make PDFs
 	latex expanded-paper-seb-main.tex >> log
 	cp paper-seb.pdf tmp
 	pdfunite expanded-paper-seb-main.pdf expanded-paper-seb-supplementary-material.pdf paper-seb.pdf >> log
-	cmp paper-seb.pdf tmp
+	if cmp paper-seb.pdf tmp; then echo SAME; else echo DIFFERENT; fi
+	rm tmp
 	echo you now have expanded*pdf as well as the expanded source files expanded*tex and paper-seb.pdf which combines them as a single file
     

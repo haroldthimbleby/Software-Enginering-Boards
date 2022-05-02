@@ -1,508 +1,419 @@
 \begin{thebibliography}{10}
 
 \bibitem{abelson}
-Abelson RP.
-\newblock Statistics as Principled Argument.
-\newblock Lawrence Erlbaum Associates; 1995.
-
-\bibitem{fixit}
-Thimbleby H.
-\newblock Fix IT: How to see and solve the problems of digital healthcare.
-\newblock Oxford University Press; 2021.
-
-\bibitem{example-stats}
-Richards D, Enrique A, Eilert N, Franklin M, Palacios J, Duffy D, et~al.
-\newblock A pragmatic randomized waitlist-controlled effectiveness and
-  cost-effectiveness trial of digital interventions for depression and anxiety.
-\newblock Nature Digital Medicine. 2020;3(85).
-\newblock doi:{10.1038/s41746-020-0293-8}.
-
-\bibitem{Speigelhalter}
-Speigelhalter D.
-\newblock The Art of Statistics: Learning from Data.
-\newblock Pelican Books; 2019.
-
-\bibitem{Ben}
-Shneiderman B.
-\newblock Opinion: {The} dangers of faulty, biased, or malicious algorithms
-  requires independent oversight.
-\newblock Proceedings National Academy of Sciences. 2016;113(48):13538--13540.
-\newblock doi:{10.1073/pnas.1618211113}.
-
-\bibitem{se-bias}
-Friedman B, Nissenbaum H.
-\newblock Bias in Computer Systems.
-\newblock ACM Transactions on Information Systems. 1996;14(3):330--347.
-\newblock doi:{10.1145/230538.230561}.
-
-\bibitem{whitty}
-Whitty CJM.
-\newblock What makes an academic paper useful for health policy?
-\newblock BMC Medicine. 2015;13:301.
-\newblock doi:{10.1186/s12916-015-0544-8}.
-
-\bibitem{assurance-case}
-Habli I, Alexander R, Hawkins R, Sujan M, McDermid J, Picardi C, et~al.
-\newblock Enhancing {COVID-19} decision making by creating an assurance case
-  for epidemiological models.
-\newblock BMJ Health {\&} Care Informatics. 2020;27(e100165):1--5.
-\newblock doi:{10.1136/bmjhci-2020-100165}.
-
-\bibitem{assessing-quality}
-Kelly D, Sanders R.
-\newblock Assessing the Quality of Scientific Software.
-\newblock First International Workshop on Software Engineering For
-  Computational Science and Engineering {\cite{assessing-quality-conference}};
-  2008.
-\newblock Available from:
-  \url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.526.5076}.
-
-\bibitem{preclinical-reproducibility}
-Freedman1 LP, Cockburn IM, Simcoe TS.
-\newblock The Economics of Reproducibility in Preclinical Research.
-\newblock PLOS Biology. 2015;13(6):e1002165.
-\newblock doi:{10.1371/journal.pbio.1002165}.
-
-\bibitem{fair}
-Wilkinson MD, Dumontier M, Aalbersberg IJ, Appleton G, Axton M, Baak A, et~al.
-\newblock The {FAIR} Guiding Principles for scientific data management and
-  stewardship.
-\newblock Scientific Data. 2016;3(160018):1--9.
-\newblock doi:{10.1038/sdata.2016.18}.
-
-\bibitem{nih-policy}
-of~Health NI.
-\newblock Final NIH Policy for Data Management and Sharing. vol. NOT-OD-21-013.
-\newblock Office of The Director, National Institutes of Health; 2020;
-  effective January 25, 2023.
-\newblock Available from:
-  \url{grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html}.
-
-\bibitem{nih-nature}
-Kozlov M.
-\newblock NIH issues a seismic mandate: share data publicly.
-\newblock Nature. 16 February 2022;.
-
-\bibitem{cite-code}
-Katz DS, Hong NPC, Clark T, Muench A, Stall S, Bouquin D, et~al.
-\newblock Recognizing the value of software: a software citation guide [version
-  2; peer review: 2 approved] Previously titled: ``The importance of software
-  citation''.
-\newblock F1000Research. 2021;9(1257).
-\newblock doi:{10.12688/f1000research.26932.2}.
-
-\bibitem{prisma}
-Page MJ, McKenzie JE, Bossuyt PM, Boutron I, Hoffmann TC, Mulrow CD, et~al.
-\newblock The {PRISMA} 2020 statement: {An} updated guideline for reporting
-  systematic reviews.
-\newblock Systematic Reviews. 2021;10(89).
-\newblock doi:{10.1186/s13643-021-01626-4}.
-
-\bibitem{enigma}
-Thimbleby H.
-\newblock Human Factors and missed solutions to {Enigma} design weaknesses.
-\newblock Cryptologia. 2016;40(2):177--202.
-\newblock doi:{10.1080/01611194.2015.1028680}.
-
-\bibitem{critiques}
-Sayburn A.
-\newblock Covid-19: {Experts} question analysis suggesting half {UK} population
-  has been infected.
-\newblock BMJ. 2020;368:m1216.
-\newblock doi:{10.1136/bmj.m1216}.
-
-\bibitem{diagnosis-reviews}
-Wynants L, Van~Calster B, Bonten MMJ, Collins GS, Debray TPA, De~Vos M, et~al.
-\newblock Prediction models for diagnosis and prognosis of covid-19 infection:
-  {Systematic} review and critical appraisal.
-\newblock BMJ. 2020;369(m1328).
-\newblock doi:{10.1136/bmj.m1328}.
-
-\bibitem{essence-of-software}
-Jackson D.
-\newblock The Essence of Software.
-\newblock Princeton University Press; 2021.
-
-\bibitem{knuth}
-Knuth DE.
-\newblock The Art of Computer Programming (Seminumerical algorithms). vol.~2.
-\newblock 3rd ed. Addison-Wesley; 1998.
-
-\bibitem{popper}
-Popper KR.
-\newblock Conjectures and Refutations: {The} Growth of Scientific Knowledge.
-\newblock 2nd ed. Routledge; 2002.
-
-\bibitem{dunning-kruger}
-Kruger J, Dunning D.
-\newblock Unskilled and Unaware of It: {How} Difficulties in Recognizing One's
-  Own Incompetence Lead to Inflated Self-Assessments.
-\newblock Journal of Personality and Social Psychology. 1999;77(6):1121--1134.
-\newblock doi:{10.1037/0022-3514.77.6.1121}.
-
-\bibitem{dunning-kruger-numeracy}
-Nuhfer E, Fleisher S, Cogan C, Wirth K, Gaze E.
-\newblock How Random Noise and a Graphical Convention Subverted Behavioral
-  Scientists' Explanations of Self-Assessment Data: {Numeracy} Underlies Better
-  Alternatives.
-\newblock Numeracy. 2017;10(1):4.
-\newblock doi:{10.5038/1936-4660.10.1.4}.
-
-\bibitem{harking}
-Kerr NL.
-\newblock {HARKing}: {H}ypothesizing after the results are known.
-\newblock Personality and Social Psychology Review. 1998;2(3):196--217.
-\newblock doi:{10.1207/s15327957pspr0203\_4}.
-
-\bibitem{framework}
-Thimbleby H, Anderson SO, Cairns P.
-\newblock A Framework for Modelling Trojans and Computer Virus Infection.
-\newblock Computer Journal. 1999;41:444--458.
-\newblock doi:{10.1093/comjnl/41.7.444}.
-
-\bibitem{science-review}
-Heesterbeek H, Anderson RM, Andreasen V, Andreasen V, Bansal S, Angelis DD,
-  et~al.
-\newblock Modeling infectious disease dynamics in the complex landscape of
-  global health.
-\newblock Science. 2015;347(6227):265--270.
-\newblock doi:{10.1126/science.aaa4339}.
-
-\bibitem{tripod}
-Moons KG, Altman DG, Reitsma JB, Ioannidis JP, Macaskill P, Steyerberg EW,
-  et~al.
-\newblock Transparent Reporting of a multivariable prediction model for
-  Individual Prognosis or Diagnosis ({TRIPOD}): {Explanation} and elaboration.
-\newblock Annals of Internal Medicine. 2015;162(1):W1--73.
-\newblock doi:{10.7326/M14-0698}.
-
-\bibitem{nature-summary}
-Adam D.
-\newblock Modelling the pandemic: {The} simulations driving the world's
-  response to {COVID}-19.
-\newblock Nature. 2020;580:316--318.
-\newblock doi:{10.1038/d41586-020-01003-6}.
-
-\bibitem{ICmodel}
-Ferguson NM, Laydon D, Nedjati-Gilani G, Imai N, Ainslie K, Baguelin M, et~al..
-  Impact of non-pharmaceutical interventions ({NPI}s) to reduce {COVID}-19
-  mortality and healthcare demand; 16 March 2020.
-\newblock Available from:
-  \url{www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf}.
-
-\bibitem{avianFluModel}
-Ferguson NM, Cummings DAT, Fraser C, Cajka JC, Cooley PC, Burke DS.
-\newblock Strategies for mitigating an influenza pandemic.
-\newblock Nature. 2005;437:209--214.
-\newblock doi:{10.1038/nature04017}.
-
-\bibitem{originalICmodel}
-Ferguson NM, Cummings DAT, Fraser C, Cajka JC, Cooley PC, Burke DS.
-\newblock Strategies for mitigating an influenza pandemic.
-\newblock Nature. 2006;442:448--452.
-\newblock doi:{10.1038/nature04795}.
-
-\bibitem{tweet}
-Ferguson N. Tweet; 22 March 2020.
-\newblock Available from:
-  \url{twitter.com/neil_ferguson/status/1241835454707699713}.
-
-\bibitem{ferguson-interview}
-Leake J.
-\newblock {Neil Ferguson} interview: {No} 10's infection guru recruits game
-  developers to build coronavirus pandemic model.
-\newblock The Sunday Times. 29 March 2020;.
-
-\bibitem{basic-reproducibilty}
-Hinsen K.
-\newblock Software Development for Reproducible Research.
-\newblock Computing in Science {\&} Engineering. 2013;15(4):60--63.
-\newblock doi:{10.1109/MCSE.2013.91}.
-
-\bibitem{thumbs-up}
-Chawla DS.
-\newblock Critiqued coronavirus simulation gets thumbs up from code-checking
-  efforts.
-\newblock Nature. 8 June 2020;582:323--324.
-
-\bibitem{codecheck}
-Scheuber A, {van Elsland} SL. Codecheck confirms reproducibility of {COVID-19}
-  model results; 1 June 2020.
-\newblock Available from:
-  \url{www.imperial.ac.uk/news/197875/codecheck-confirms-reproducibility-covid-19-model-results}.
-
-\bibitem{NVP}
-{Hatton} L, {Roberts} A.
-\newblock How accurate is scientific software?
-\newblock IEEE Transactions on Software Engineering. 1994;20(10):785--797.
-\newblock doi:{10.1109/32.328993}.
-
-\bibitem{nvp-ferguson}
-Halloran ME, Ferguson NM, Eubank S, Longini IM, Cummings DAT, Lewis B, et~al.
-\newblock Modeling targeted layered containment of an influenza pandemic in the
-  United States.
-\newblock Proceedings of the National Academy of Sciences.
-  2008;105(12):4639--4644.
-\newblock doi:{10.1073/pnas.0706849105}.
-
-\bibitem{refactoring}
-Ferguson N. Tweet; 22 March 2020.
-\newblock Available from:
-  \url{twitter.com/neil_ferguson/status/1241835456947519492}.
-
-\bibitem{bad-code}
-Richards D, Boudnik K.
-\newblock {Neil} {Ferguson's} {Imperial} model could be the most devastating
-  software mistake of all time.
-\newblock The Telegraph. 16 May 2020;{\hskip -.25em}.
-
-\bibitem{pseudo}
-Zlojutro A, Rey D, Gardner L.
-\newblock A decision-support framework to optimize border control for global
-  outbreak mitigation.
-\newblock Nature Scientific Reports. 2019;9(2216).
-\newblock doi:{10.1038/s41598-019-38665-w}.
-
-\bibitem{relit}
-Thimbleby H, Williams D.
-\newblock A tool for publishing reproducible algorithms {\&} {A} reproducible,
-  elegant algorithm for sequential experiments.
-\newblock Science of Computer Programming. 2018;156:45--67.
-\newblock doi:{10.1016/j.scico.2017.12.010}.
-
-\bibitem{nature-review}
-Perkel JM.
-\newblock How to fix your scientific coding errors.
-\newblock Nature. 2022;602:172--173.
-\newblock doi:{10.1038/d41586-022-00217-0}.
-
-\bibitem{psychological-modeling}
-Guest O, Martin AE.
-\newblock How Computational Modeling Can Force Theory Building in Psychological
-  Science.
-\newblock Perspectives on Psychological Science. 2021;16(4):789--802.
-\newblock doi:{10.1177/1745691620970585}.
-
-\bibitem{actr}
-{ACT-R Research Group}. ACT-R; 2022.
-\newblock Available from: \url{act-r.psy.cmu.edu/software}.
-
-\bibitem{ourReview}
-Ladkin PB, Littlewood B, Thimbleby H, Thomas M.
-\newblock The {Law Commission} presumption concerning the dependability of
-  computer evidence.
-\newblock Digital Evidence and Electronic Signature Law Review. 2020;17.
-\newblock doi:{10.14296/deeslr.v17i0.5143 (NB See
-  \url{journals.sas.ac.uk/deeslr/article/view/5143} until the DOI is
-  resolved.)}.
-
-\bibitem{hamming}
-Hamming RW.
-\newblock Numerical Methods for Scientists and Engineers.
-\newblock Dover Publications Inc.; 1987.
-
-\bibitem{unfinished}
-Kissler SM, Tedijanto C, Goldstein E, Kissler SM, Tedijanto C, Goldstein E,
-  et~al.
-\newblock Projecting the transmission dynamics of {SARS-CoV-2} through the
-  postpandemic period.
-\newblock Science. 2020;doi:{10.1126/science.abb5793}.
-
-\bibitem{lancet-unfinished}
-Verity, R, Okell, C L, Dorigatti, Winskill IP, et~al.
-\newblock Estimates of the severity of coronavirus disease 2019: {A}
-  model-based analysis.
-\newblock Lancet. 2020;doi:{10.1016/S1473-3099(20)30243-7}.
-
-\bibitem{hoare}
-Hoare CAR.
-\newblock An axiomatic basis for computer programming.
-\newblock Communications of the ACM. 1969;12(10):576--580.
-\newblock doi:{10.1145/363235.363259}.
-
-\bibitem{notebooks}
-Schnell S.
-\newblock Ten Simple Rules for a Computational Biologist's Laboratory Notebook.
-\newblock PLoS Computational Biology. 2015;11(9):e1004385.
-\newblock doi:{10.1371/journal.pcbi.1004385}.
-
-\bibitem{machine-learning-reproducibility}
-Thimbleby H.
-\newblock Give your computer's {IQ} a boost --- {{\emph{{Journal of Machine
-  Learning Research}}}}.
-\newblock Times Higher Education Supplement. 9 May, 2004;.
-
-\bibitem{flu-model}
-Sander B, Nizam A, {Garrison Jr} LP, Postma MJ, Halloran ME, {Longini Jr } IM.
-\newblock Economic evaluation of influenza pandemic mitigation strategies in
-  the us using a stochastic microsimulation transmission model.
-\newblock Value Health. 2009;12(2):226--233.
-\newblock doi:{10.1111/j.1524-4733.2008.00437.x}.
-
-\bibitem{ziman}
-Ziman JM.
-\newblock Reliable Knowledge: An Exploration of the Grounds for Belief in
-  Science.
-\newblock 1st ed. Cambridge University Press; 1979.
-
-\bibitem{open-source}
-Fomel S.
-\newblock Reproducible Research as a Community Effort: Lessons from the
-  {Madagascar Project}.
-\newblock Computing in Science {\&} Engineering. 2015;17(1):20--26.
-\newblock doi:{10.1109/MCSE.2014.94}.
-
-\bibitem{stability}
-Salama M, Bahsoon R, Lago P.
-\newblock Stability in Software Engineering: Survey of the State-of-the-Art and
-  Research Directions.
-\newblock IEEE Transactions on Software Engineering. 2021;47(7):1468--1510.
-\newblock doi:{10.1109/TSE.2019.2925616}.
-
-\bibitem{cbc}
-Woodcock JCP, Larsen PG, Bicarregui JC, Fitzgerald JS.
-\newblock Formal methods: {Practice} and experience.
-\newblock ACM Computing Surveys. 2009;41(4).
-\newblock doi:{10.1145/1592434.1592436}.
-
-\bibitem{ethics-code}
-ACM.
-\newblock Code of Ethics and Professional Conduct.
-\newblock ACM; 2020.
-\newblock Available from: \url{www.acm.org/code-of-ethics}.
+{\sc R.~P. Abelson}, {\em Statistics as Principled Argument}, Lawrence Erlbaum
+  Associates, 1995.
 
 \bibitem{acm-artifacts}
-ACM.
-\newblock Artifact Review and Badging --- Current. vol. Artifact Review and
-  Badging Version 1.1.
-\newblock ACM; 2020.
-\newblock Available from:
+{\sc ACM}, {\em Artifact Review and Badging --- Current}, \textbf{Version 1.1},
+  ACM, 2020.
+\newblock
   \url{www.acm.org/publications/policies/artifact-review-and-badging-current}.
 
-\bibitem{redmill}
-Redmill F.
-\newblock Understanding the Use, Misuse and Abuse of Safety Integrity Levels.
-\newblock In: Lessons in System Safety, Eighth Safety-critical Systems
-  Symposium; 2000.Available from:
-  \url{homepages.cs.ncl.ac.uk/felix.redmill/publications/1%20SILs.pdf}.
+\bibitem{ethics-code}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Code of Ethics and
+  Professional Conduct}, ACM, 2020.
+\newblock \url{www.acm.org/code-of-ethics}.
+\newblock Accessed 23 April 2020.
 
-\bibitem{iec61508}
-IEC 61508:2010 CMV Commented version, Functional safety of
-  electrical/electronic/programmable electronic safety-related systems; 2010.
-\newblock Available from: \url{webstore.iec.ch/publication/22273}.
+\bibitem{actr}
+{\sc {ACT-R Research Group}}, {\em {ACT-R}}, 2022.
+\newblock \url{act-r.psy.cmu.edu/software}.
 
-\bibitem{ABCs-SE}
-Stol KJ, Fitzgerald B.
-\newblock The ABC of Software Engineering Research.
-\newblock ACM Transactions on Software Engingeering and Methodology.
-  2018;27(3).
-\newblock doi:{10.1145/3241743}.
+\bibitem{nature-summary}
+{\sc D.~Adam}, ``Modelling the pandemic: {The} simulations driving the world's
+  response to {COVID}-19'',  \textbf{580}:316--318,  2020.
+\newblock \doi{10.1038/d41586-020-01003-6}.
 
-\bibitem{landauer}
-Landauer TK.
-\newblock The Trouble with Computers: Usefulness, Usability, and Productivity.
-\newblock MIT Press; 1995.
-
-\bibitem{thimbleby-landauer}
-Thimbleby H.
-\newblock The Trouble with Computers: Usefulness, Usability, and Productivity
-  (by Thomas K.~Landauer).
-\newblock Computational Linguistics. 1996;22(2):265--276.
-
-\bibitem{lancet-retracted}
-Mehra MR, Desai SS, Ruschitzka F, Patel AN.
-\newblock {RETRACTED}: {Hydroxychloroquine} or chloroquine with or without a
-  macrolide for treatment of {COVID}-19: {A} multinational registry analysis.
-\newblock The Lancet. 2020; p. 1--10.
-\newblock doi:{10.1016/S0140-6736(20)31180-6}.
-
-\bibitem{science-lancet1}
-Servick K, Enserink M.
-\newblock A mysterious company's coronavirus papers in top medical journals may
-  be unraveling.
-\newblock Science. 2020;doi:{10.1126/science.abd1337}.
-
-\bibitem{science-lancet2}
-Servick K.
-\newblock {COVID}-19 data scandal prompts tweaks to elite journal's review
-  process.
-\newblock Science. 2020;doi:{10.1126/science.abe8656}.
-
-\bibitem{lancet-learning}
-{The Editors}.
-\newblock Learning from a retraction.
-\newblock The Lancet. 2020;396:799.
-\newblock doi:{10.1016/S0140-6736(20)31958-9}.
-
-\bibitem{jvs1}
-Hardouin S, Cheng TW, Mitchell EL, Raulli SJ, Jones DW, Siracuse JJ, et~al.
-\newblock Prevalence of unprofessional social media content among young
-  vascular surgeons.
-\newblock Journal of Vascular Surgery. 2020;72(2):667--671.
-\newblock doi:{10.1016/j.jvs.2019.10.069}.
-
-\bibitem{jvs2}
-Baumann J.
-\newblock \#{MedBikini} Backlash Exposes Research Ethics Boards' Digital Gaps.
-\newblock Bloomberg Law. 29 July, 2020;.
-
-\bibitem{jvs3}
-{The Editors {(of \emph{Journal of Vascular Surgery\/})}}.
-\newblock {Editors' Statement Regarding ``Prevalence of unprofessional social
-  media content among young vascular surgeons''}.
-\newblock FaceBook. 2020;.
-
-\bibitem{numerals}
-Thimbleby H, Cairns P.
-\newblock Interactive numerals.
-\newblock Royal Society Open Science. 2017;4(4):160903.
-\newblock doi:{10.1098/rsos.160903}.
-
-\bibitem{fda}
-Zhang Y, Masci P, Jones P, Thimbleby H.
-\newblock User Interface Software Errors in Medical Devices.
-\newblock Biomedical Instrumentation {\&} Technology. 2019;53(3):182--194.
-\newblock doi:{10.2345/0899-8205-53.3.182}.
-
-\bibitem{excel-fiasco}
-Thimbleby H.
-\newblock The problem isn't {Excel}, it's unprofessional software engineering.
-\newblock BMJ. 2020;371(m4181).
-\newblock doi:{10.1136/bmj.m4181}.
-
-\bibitem{science-delays}
-Wadman M.
-\newblock Could too much time between doses drive the coronavirus to outwit
-  vaccines?
-\newblock Science. 2021;doi:{10.1126/science.abg5655}.
+\bibitem{turing-way}
+{\sc B.~Arnold, L.~Bowler, S.~Gibson, P.~Herterich, R.~Higman, {\ldots}, and
+  K.~Whitaker}, {\em {The Turing Way: A Handbook for Reproducible Data
+  Science}}, \textbf{v0.0.4}, Zenodo, 2022.
+\newblock \url{the-turing-way.netlify.app/welcome}.
 
 \bibitem{reproducibility}
-Benureau FCY, Rougier NP.
-\newblock Re-run, Repeat, Reproduce, Reuse, Replicate: {Transforming} Code into
-  Scientific.
-\newblock Frontiers in Neuroinformatics. 2017;11(69).
-\newblock doi:{10.3389/fninf.2017.00069}.
-
-\bibitem{parliamentary-evidence}
-{House of Commons Science and Technology Committee}. The {UK} response to
-  covid-19: {Use} of scientific advice; 16 December 2020.
-\newblock Available from:
-  \url{committees.parliament.uk/publications/4165/documents/41300/default}.
-
-\bibitem{my-parliamentary-evidence}
-Thimbleby H.
-\newblock Written Evidence Submitted by {Harold Thimbleby} to The {UK} response
-  to covid-19: {Use} of scientific advice.
-\newblock C190005. {House of Commons Science and Technology Committee}
-  {\cite{parliamentary-evidence}}; 29 April 2020.
-\newblock Available from:
-  \url{committees.parliament.uk/work/91/default/publications/written-evidence/?SearchTerm=thimbleby}.
+{\sc F.~C.~Y. Benureau and N.~P. Rougier}, ``Re-run, repeat, reproduce, reuse,
+  replicate: {Transforming} code into scientific contributions'', (69),  2018.
+\newblock \doi{10.3389/fninf.2017.00069}.
 
 \bibitem{assessing-quality-conference}
-Carver JC.
-\newblock First International Workshop on Software Engineering for
-  Computational Science {\&} Engineering.
-\newblock Computing in Science {\&} Engineering. 2009;11(2):7--11.
-\newblock doi:{10.1109/MCSE.2009.30}.
+{\sc J.~C. Carver}, ``First international workshop on software engineering for
+  computational science {\&} engineering'', (2):7--11,  2009.
+\newblock \doi{10.1109/MCSE.2009.30}.
+
+\bibitem{temperature}
+{\sc H.~Chang}, {\em Inventing Temperature: Measurement and Scientific
+  Progress}, Oxford Studies in the Philosophy of Science, 2007.
+
+\bibitem{thumbs-up}
+{\sc D.~S. Chawla}, ``Critiqued coronavirus simulation gets thumbs up from
+  code-checking efforts'',  \textbf{582}:323--324,  8 June 2020.
+\newblock \url{www.nature.com/articles/d41586-020-01685-y}.
+
+\bibitem{misra}
+{\sc eh}, {\em {MISRA} Compliance:2020 -- Achieving compliance with {MISRA}
+  Coding Guidelines}, MISRA Consortium, 2020.
+\newblock \url{www.misra.org.uk}.
+
+\bibitem{tweet}
+{\sc N.~Ferguson}, {\em Tweet}, 22 March 2020.
+\newblock \url{twitter.com/neil_ferguson/status/1241835454707699713}.
+
+\bibitem{refactoring}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Tweet}, 22 March
+  2020.
+\newblock \url{twitter.com/neil_ferguson/status/1241835456947519492}.
+
+\bibitem{avianFluModel}
+{\sc N.~M. Ferguson, D.~A.~T. Cummings, C.~Fraser, J.~C. Cajka, P.~C. Cooley,
+  and D.~S. Burke}, ``Strategies for containing an emerging influenza pandemic
+  in {Southeast Asia}'',  \textbf{437}:209--214,  2005.
+\newblock \doi{10.1038/nature04017}.
+
+\bibitem{originalICmodel}
+{\sc N.~M. Ferguson, D.~A.~T. Cummings, C.~Fraser, J.~C. Cajka, P.~C. Cooley,
+  and D.~S. Burke}, ``Strategies for mitigating an influenza pandemic'',
+  \textbf{442}:448--452,  2006.
+\newblock \doi{10.1038/nature04795}.
+
+\bibitem{ICmodel}
+{\sc N.~M. Ferguson, D.~Laydon, G.~Nedjati-Gilani, N.~Imai, K.~Ainslie,
+  M.~Baguelin, S.~Bhatia, A.~Boonyasiri, Z.~Cucunub{\'a}, G.~Cuomo-Dannenburg,
+  A.~Dighe, I.~Dorigatti, H.~Fu, K.~Gaythorpe, W.~Green, A.~Hamlet, W.~Hinsley,
+  L.~C. Okell, S.~van Elsland, H.~Thompson, R.~Verity, E.~Volz, H.~Wang,
+  Y.~Wang, P.~G.~T. Walker, C.~Walters, P.~Winskill, C.~Whittaker, C.~A.
+  Donnelly, S.~Riley, and A.~C. Ghani}, {\em Impact of non-pharmaceutical
+  interventions ({NPI}s) to reduce {COVID}-19 mortality and healthcare demand},
+  16 March 2020.
+\newblock
+  \url{www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf}.
+
+\bibitem{open-source}
+{\sc S.~Fomel}, ``Reproducible research as a community effort: Lessons from the
+  {Madagascar Project}'', (1):20--26,  2015.
+\newblock \doi{10.1109/MCSE.2014.94}.
+
+\bibitem{preclinical-reproducibility}
+{\sc L.~P. Freedman1, I.~M. Cockburn, and T.~S. Simcoe}, ``The economics of
+  reproducibility in preclinical research'', (6):e1002165,  2015.
+\newblock \doi{10.1371/journal.pbio.1002165}.
+
+\bibitem{se-bias}
+{\sc B.~Friedman and H.~Nissenbaum}, ``Bias in computer systems'',
+  (3):330--347,  1996.
+\newblock \doi{10.1145/230538.230561}.
+
+\bibitem{Executable-Paper}
+{\sc A.~Gabriela and R.~Capone}, ``Executable paper grand challenge workshop'',
+   \textbf{4}:577--578,  2011.
+\newblock \doi{10.1016/j.procs.2011.04.060}.
+
+\bibitem{goldacre}
+{\sc B.~Goldacre}, {\em Better, broader, safer: {Using} health data for
+  research and analysis}, Department of Health and Social Care, 2022.
+\newblock
+  \url{www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis}.
+
+\bibitem{psychological-modeling}
+{\sc O.~Guest and A.~E. Martin}, ``How computational modeling can force theory
+  building in psychological science'', (4):789--802,  2021.
+\newblock \doi{10.1177/1745691620970585}.
+
+\bibitem{assurance-case}
+{\sc I.~Habli, R.~Alexander, R.~Hawkins, M.~Sujan, J.~McDermid, C.~Picardi, and
+  T.~Lawton}, ``Enhancing {COVID-19} decision making by creating an assurance
+  case for epidemiological models'', (e100165):1--5,  2020.
+\newblock \doi{10.1136/bmjhci-2020-100165}.
+
+\bibitem{nvp-ferguson}
+{\sc M.~E. Halloran, N.~M. Ferguson, S.~Eubank, I.~M. Longini, D.~A.~T.
+  Cummings, B.~Lewis, S.~Xu, C.~Fraser, A.~Vullikanti, T.~C. Germann,
+  D.~Wagener, R.~Beckman, K.~Kadau, C.~Barrett, C.~A. Macken, D.~S. Burke, and
+  P.~Cooley}, ``Modeling targeted layered containment of an influenza pandemic
+  in the united states'', (12):4639--4644,  2008.
+\newblock \url{www.pnas.org/content/105/12/4639}.
+\newblock \doi{10.1073/pnas.0706849105}.
+
+\bibitem{hamming}
+{\sc R.~W. Hamming}, {\em Numerical Methods for Scientists and Engineers},
+  Dover Publications Inc., 1987.
+
+\bibitem{NVP}
+{\sc L.~{Hatton} and A.~{Roberts}}, ``How accurate is scientific software?'',
+  (10):785--797,  1994.
+\newblock \doi{10.1109/32.328993}.
+
+\bibitem{science-review}
+{\sc H.~Heesterbeek, R.~M. Anderson, V.~Andreasen, V.~Andreasen, S.~Bansal,
+  D.~D. Angelis, C.~Dye, K.~T.~D. Eames, W.~J. Edmunds, S.~D.~W. Frost,
+  S.~Funk, T.~D. Hollingsworth, T.~House, V.~Isham, P.~Klepac, J.~Lessler,
+  J.~O. Lloyd-Smith, C.~J.~E. Metcalf, D.~Mollison, L.~Pellis, J.~R.~C.
+  Pulliam, M.~G. Roberts, C.~Viboud, and {Isaac Newton Institute IDD
+  Collaboration}}, ``Modeling infectious disease dynamics in the complex
+  landscape of global health'', (6227):265--270,  2015.
+\newblock \doi{10.1126/science.aaa4339}.
+
+\bibitem{basic-reproducibilty}
+{\sc K.~Hinsen}, ``Software development for reproducible research'',
+  (4):60--63,  2013.
+\newblock \doi{10.1109/MCSE.2013.91}.
+
+\bibitem{hoare}
+{\sc C.~A.~R. Hoare}, ``An axiomatic basis for computer programming'',
+  (10):576--580,  1969.
+\newblock \doi{10.1145/363235.363259}.
+
+\bibitem{parliamentary-evidence}
+{\sc {House of Commons Science and Technology Committee}}, {\em The {UK}
+  response to covid-19: {Use} of scientific advice}, 16 December 2020.
+\newblock
+  \url{committees.parliament.uk/publications/4165/documents/41300/default}.
+
+\bibitem{iec61508}
+{\sc {IEC Technical Committee TC 65}}, {\em {IEC 61508:2010 CMV} commented
+  version, functional safety of electrical/electronic/programmable electronic
+  safety-related systems}, 2010.
+\newblock \url{webstore.iec.ch/publication/22273}.
+
+\bibitem{essence-of-software}
+{\sc D.~Jackson}, {\em The Essence of Software}, Princeton University Press,
+  2021.
+
+\bibitem{cite-code}
+{\sc D.~S. Katz, N.~P.~C. Hong, T.~Clark, A.~Muench, S.~Stall, D.~Bouquin,
+  M.~Cannon, S.~Edmunds, T.~Faez, P.~Feeney, M.~Fenner, M.~Friedman,
+  G.~Grenier, M.~Harrison, J.~Heber, A.~Leary, C.~MacCallum, H.~Murray,
+  E.~Pastrana, K.~Perry, D.~Schuster, M.~Stockhause, and J.~Yeston},
+  ``Recognizing the value of software: {A} software citation guide [version 2;
+  peer review: 2 approved] {Previously} titled: ``{The} importance of software
+  citation'''', (1257),  2021.
+\newblock \doi{10.12688/f1000research.26932.2}.
+
+\bibitem{assessing-quality}
+{\sc D.~Kelly and R.~Sanders}, {\em Assessing the Quality of Scientific
+  Software}, First International Workshop on Software Engineering For
+  Computational Science and Engineering {\cite{assessing-quality-conference}},
+  2008.
+\newblock \url{citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.526.5076}.
+
+\bibitem{unfinished}
+{\sc S.~M. Kissler, C.~Tedijanto, E.~Goldstein, Y.~H. Grad, and M.~Lipsitch},
+  ``Projecting the transmission dynamics of {SARS-CoV-2} through the
+  postpandemic period'', (6493):860--868,  2020.
+\newblock \doi{10.1126/science.abb5793}.
+
+\bibitem{knuth}
+{\sc D.~E. Knuth}, {\em The Art of Computer Programming (Seminumerical
+  algorithms)}, \textbf{2}, Addison-Wesley, 3rd~ed., 1998.
+
+\bibitem{nih-nature}
+{\sc M.~Kozlov}, ``{NIH} issues a seismic mandate: {Share} data publicly'',
+  {\em Nature},  16 February 2022.
+\newblock \url{www.nature.com/articles/d41586-022-00402-1}.
+
+\bibitem{ourReview}
+{\sc P.~B. Ladkin, B.~Littlewood, H.~Thimbleby, and M.~Thomas}, ``The {Law
+  Commission} presumption concerning the dependability of computer evidence'',
+  \textbf{17}:1--14,  2020.
+\newblock \doi{10.14296/deeslr.v17i0.5143}.
+
+\bibitem{landauer}
+{\sc T.~K. Landauer}, {\em The Trouble with Computers: Usefulness, Usability,
+  and Productivity}, MIT Press, 1995.
+
+\bibitem{ferguson-interview}
+{\sc J.~Leake}, ``{Neil Ferguson} interview: {No} 10's infection guru recruits
+  game developers to build coronavirus pandemic model'', {\em The Sunday
+  Times},  29 March 2020.
+\newblock
+  \url{www.thetimes.co.uk/article/neil-ferguson-interview-no-10s-infection-guru-recruits-game-developers-to-build-coronavirus-pandemic-model-zl5rdtjq5}.
+
+\bibitem{tripod}
+{\sc K.~G. Moons, D.~G. Altman, J.~B. Reitsma, J.~P. Ioannidis, P.~Macaskill,
+  E.~W. Steyerberg, A.~J. Vickers, D.~F. Ransohoff, and G.~S. Collins},
+  ``Transparent reporting of a multivariable prediction model for individual
+  prognosis or diagnosis ({TRIPOD}): {Explanation} and elaboration'',
+  (1):W1--73,  2015.
+\newblock \doi{10.7326/M14-0698}.
+
+\bibitem{nih-policy}
+{\sc {National Institutes of Health}}, {\em Final {NIH} Policy for Data
+  Management and Sharing}, \textbf{NOT-OD-21-013}, Office of The Director,
+  National Institutes of Health, 2020; effective January 25, 2023.
+\newblock \url{grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html}.
+
+\bibitem{prisma}
+{\sc M.~J. Page, J.~E. McKenzie, P.~M. Bossuyt, I.~Boutron, T.~C. Hoffmann,
+  C.~D. Mulrow, L.~Shamseer, J.~M. Tetzlaff, E.~A. Akl, S.~E. Brennan, R.~Chou,
+  J.~Glanville, J.~M. Grimshaw, A.~Hr{\'o o}bjartsson, M.~M. Lalu, T.~Li, E.~W.
+  Loder, E.~Mayo-Wilson, S.~McDonald, L.~A. McGuinness, L.~A. Stewart,
+  J.~Thomas, A.~C. Tricco, V.~A. Welch, P.~Whiting, and D.~Moher}, ``The
+  {PRISMA} 2020 statement: {An} updated guideline for reporting systematic
+  reviews'', (89),  2021.
+\newblock \doi{10.1186/s13643-021-01626-4}.
+
+\bibitem{nature-review}
+{\sc J.~M. Perkel}, ``How to fix your scientific coding errors'',
+  \textbf{602}:172--173,  2022.
+\newblock \doi{10.1038/d41586-022-00217-0}.
+
+\bibitem{a=b}
+{\sc M.~Petkovsek, H.~Wilf, and D.~Zeilberger}, {\em {$A=B$}}, A K Peters.
+  Ltd., 1996.
+\newblock \url{www2.math.upenn.edu/~wilf/AeqB.html}.
+
+\bibitem{popper}
+{\sc K.~R. Popper}, {\em Conjectures and Refutations: {The} Growth of
+  Scientific Knowledge}, Routledge, 2nd~ed., 2002.
+
+\bibitem{redmill}
+{\sc F.~Redmill}, {\em Understanding the use, misuse and abuse of safety
+  integrity levels}, in Lessons in System Safety, Eighth Safety-critical
+  Systems Symposium, 2000.
+\newblock Revised.
+
+\bibitem{bad-code}
+{\sc D.~Richards and K.~Boudnik}, ``{Neil} {Ferguson's} {Imperial} model could
+  be the most devastating software mistake of all time'', {\em The Telegraph},
+  16 May 2020.
+\newblock
+  \url{www.telegraph.co.uk/technology/2020/05/16/neil-fergusons-imperial-model-could-devastating-software-mistake}.
+
+\bibitem{example-stats}
+{\sc D.~Richards, A.~Enrique, N.~Eilert, M.~Franklin, J.~Palacios, D.~Duffy,
+  C.~Earley, J.~Chapman, G.~Jell, S.~Sollesse, and L.~Timulak}, ``A pragmatic
+  randomized waitlist-controlled effectiveness and cost-effectiveness trial of
+  digital interventions for depression and anxiety'', (85),  2020.
+\newblock \doi{10.1038/s41746-020-0293-8}.
+
+\bibitem{flu-model}
+{\sc B.~Sander, A.~Nizam, L.~P. {Garrison Jr}, M.~J. Postma, M.~E. Halloran,
+  and I.~M. {Longini Jr}}, ``Economic evaluation of influenza pandemic
+  mitigation strategies in the us using a stochastic microsimulation
+  transmission model'', (2):226--233,  2009.
+\newblock \doi{10.1111/j.1524-4733.2008.00437.x}.
+
+\bibitem{critiques}
+{\sc A.~Sayburn}, ``Covid-19: {Experts} question analysis suggesting half {UK}
+  population has been infected'',  \textbf{368}:m1216,  2020.
+\newblock \doi{10.1136/bmj.m1216}.
+
+\bibitem{codecheck}
+{\sc A.~Scheuber and S.~L. {van Elsland}}, {\em Codecheck confirms
+  reproducibility of {COVID-19} model results}, 1 June 2020.
+\newblock
+  \url{www.imperial.ac.uk/news/197875/codecheck-confirms-reproducibility-covid-19-model-results}.
+
+\bibitem{notebooks}
+{\sc S.~Schnell}, ``Ten simple rules for a computational biologist's laboratory
+  notebook'', (9):e1004385,  2015.
+\newblock \doi{10.1371/journal.pcbi.1004385}.
+
+\bibitem{Ben}
+{\sc B.~Shneiderman}, ``Opinion: {The} dangers of faulty, biased, or malicious
+  algorithms requires independent oversight'', (48):13538--13540,  2016.
+\newblock \doi{10.1073/pnas.1618211113}.
+
+\bibitem{Speigelhalter}
+{\sc D.~Speigelhalter}, {\em The Art of Statistics: Learning from Data},
+  Pelican Books, 2019.
+
+\bibitem{ABCs-SE}
+{\sc K.-J. Stol and B.~Fitzgerald}, ``The {ABC} of software engineering
+  research'', (3):1--51,  2018.
+\newblock \doi{10.1145/3241743}.
+
+\bibitem{thimbleby-landauer}
+{\sc H.~Thimbleby}, ``The trouble with computers: Usefulness, usability, and
+  productivity (by {Thomas} {K.~Landauer})'', (2):265--276,  1996.
+
+\bibitem{excel-fiasco}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, ``The problem isn't
+  {Excel}, it's unprofessional software engineering'', (m4181),  2020.
+\newblock \doi{10.1136/bmj.m4181}.
+
+\bibitem{fixit}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Fix IT: How to see
+  and solve the problems of digital healthcare}, Oxford University Press, 2021.
+
+\bibitem{my-parliamentary-evidence}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Written Evidence
+  Submitted by {Harold Thimbleby} to The {UK} response to covid-19: {Use} of
+  scientific advice}, no.~C190005, {House of Commons Science and Technology
+  Committee} {\cite{parliamentary-evidence}}, 29 April 2020.
+\newblock
+  \url{committees.parliament.uk/work/91/default/publications/written-evidence/?SearchTerm=thimbleby}.
+
+\bibitem{machine-learning-reproducibility}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, ``Give your computer's
+  {IQ} a boost --- {{\emph{{Journal of Machine Learning Research}}}}'', {\em
+  Times Higher Education Supplement},  9 May, 2004.
+\newblock
+  \url{www.timeshighereducation.co.uk/story.asp?sectioncode=26&storycode=176549}.
+
+\bibitem{relit}
+{\sc H.~Thimbleby and D.~Williams}, ``A tool for publishing reproducible
+  algorithms {\&} {A} reproducible, elegant algorithm for sequential
+  experiments'',  \textbf{156}:45--67,  2018.
+\newblock \doi{10.1016/j.scico.2017.12.010}, Also on GitHub:
+  \url{GitHub.com/haroldthimbleby/relit}.
+
+\bibitem{rap}
+{\sc M.~Upson}, {\em Reproducible analytical pipelines}, 2017.
+\newblock
+  \url{dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline}.
+
+\bibitem{lancet-unfinished}
+{\sc Verity, R., Okell, L.~C., Dorigatti, I.~P. Winskill, C.~Whittaker,
+  N.~Imai, G.~Cuomo-Dannenburg, H.~Thompson, P.~G.~T. Walker, H.~Fu, A.~Dighe,
+  J.~T. Griffin, M.~Baguelin, S.~Bhatia, A.~Boonyasiri, A.~Cori, Z.~Cucunub{\'
+  a}, R.~FitzJohn, K.~Gaythorpe, W.~Green, A.~Hamlet, W.~Hinsley, D.~Laydon,
+  G.~Nedjati-Gilani, S.~Riley, S.~van Elsland, E.~Volz, H.~Wang, Y.~Wang,
+  X.~Xi, C.~A. Donnelly, A.~C. Ghani, and N.~M. Ferguson}, ``Estimates of the
+  severity of coronavirus disease 2019: {A} model-based analysis'', {\em
+  Lancet},  2020.
+\newblock \doi{10.1016/S1473-3099(20)30243-7}.
+
+\bibitem{science-delays}
+{\sc M.~Wadman}, ``Could too much time between doses drive the coronavirus to
+  outwit vaccines?'', {\em Science},  2021.
+\newblock \doi{10.1126/science.abg5655}.
+
+\bibitem{whitty}
+{\sc C.~J.~M. Whitty}, ``What makes an academic paper useful for health
+  policy?'',  \textbf{13}:301,  2015.
+\newblock \doi{10.1186/s12916-015-0544-8}.
+
+\bibitem{fair}
+{\sc M.~D. Wilkinson, M.~Dumontier, I.~J. Aalbersberg, G.~Appleton, M.~Axton,
+  A.~Baak, N.~Blomberg, J.-W. Boiten, L.~B. da~Silva~Santos, P.~E. Bourne,
+  J.~Bouwman, A.~J. Brookes, T.~Clark, M.~Crosas, I.~Dillo, O.~Dumon,
+  S.~Edmunds, C.~T. Evelo, R.~Finkers, A.~Gonzalez-Beltran, A.~J. Gray,
+  P.~Groth, C.~Goble, J.~S. Grethe, J.~Heringa, P.~A. {'}t Hoen, R.~Hooft,
+  T.~Kuhn, R.~Kok, J.~Kok, S.~J. Lusher, M.~E. Martone, A.~Mons, A.~L. Packer,
+  B.~Persson, P.~Rocca-Serra, M.~Roos, R.~van Schaik, S.-A. Sansone,
+  E.~Schultes, T.~Sengstag, T.~Slater, G.~Strawn, M.~A. Swertz, M.~Thompson,
+  J.~van~der Lei, E.~van Mulligen, J.~Velterop, A.~Waagmeester, P.~Wittenburg,
+  K.~Wolstencroft, J.~Zhao, and B.~Mons}, ``The {FAIR} guiding principles for
+  scientific data management and stewardship'', (160018):1--9,  2016.
+\newblock \doi{10.1038/sdata.2016.18}.
+
+\bibitem{cbc}
+{\sc J.~C.~P. Woodcock, P.~G. Larsen, J.~C. Bicarregui, and J.~S. Fitzgerald},
+  ``Formal methods: {Practice} and experience'', (4):1--36,  2009.
+\newblock \doi{10.1145/1592434.1592436}.
+
+\bibitem{diagnosis-reviews}
+{\sc L.~Wynants, B.~Van~Calster, M.~M.~J. Bonten, G.~S. Collins, T.~P.~A.
+  Debray, M.~De~Vos, M.~C. Haller, G.~Heinze, K.~G.~M. Moons, R.~D. Riley,
+  E.~Schuit, L.~J.~M. Smits, K.~I.~E. Snell, E.~W. Steyerberg, C.~Wallisch, and
+  M.~van Smeden}, ``Prediction models for diagnosis and prognosis of covid-19
+  infection: {Systematic} review and critical appraisal'', (m1328),  2020.
+\newblock \doi{10.1136/bmj.m1328}.
+
+\bibitem{pseudo}
+{\sc A.~Zlojutro, D.~Rey, and L.~Gardner}, ``A decision-support framework to
+  optimize border control for global outbreak mitigation'', (2216),  2019.
+\newblock \doi{10.1038/s41598-019-38665-w}.
 
 \end{thebibliography}

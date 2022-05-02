@@ -29,11 +29,17 @@ for i in git-*; do
 		k=round(n); if( k >= 1 ) return sprintf("0.00%s", k);
 		return "---";
     }
-	function byteunits(n) {
+	function byteTableUnits(n) {
 		if( n == 0 ) return "\\multicolumn{2}{c|}{---}";
 		if( n < 1000 ) return sprintf("%s&", n);
 		if( n < 1000000 ) return sprintf("%s&kb", round(n/1000));
 		return sprintf("%s&Mb", round(n/1000000));
+	}
+	function byteStringUnits(n) {
+		if( n == 0 ) return "0";
+		if( n < 1000 ) return sprintf("%s", n);
+		if( n < 1000000 ) return sprintf("%s kb", round(n/1000));
+		return sprintf("%s Mb", round(n/1000000));
 	}
 /.*.(c|cpp|hpp|h|in|R|rds|Rproj|py|sh|m|js|java|css)$/ { inc=$1; if( inc==0 ) inc = 1; code += inc }
 { inc=$1; if( inc==0 ) inc = 1; total += inc }
@@ -44,9 +50,11 @@ fileCount=ENVIRON["fileCount"]
 t=substr(t,5); 
 u=t;
 gsub(/_/,".",u)
-printf "\\reponame{%s}{%s} & \\csname pagelength-%s\\endcsname & \\commarise{%d} & %s & %s \\\\\n", t, u, u, fileCount, kloc(code), byteunits(bytes)
-printf "%d\t%d\t%d\n", fileCount, code, bytes >> "sizes.tmp"
-if( u == "covid-sim" ) printf "%d\n", kloc(code) > "../generated-covidsimSummary.tex"
+printf "\\reponame{%s}{%s} & \\csname pagelength-%s\\endcsname & \\commarise{%d} & %s & %s \\\\\n", t, u, u, fileCount, kloc(code), byteTableUnits(bytes)
+printf "%d\t%d\t%d\n", fileCount, code, byteTableUnits(bytes) >> "sizes.tmp"
+if( u == "covid-sim" ) {
+   printf "%% data calculated from Ferguson's covid-sim repo\n\\def \\covidsimkLOC {%s}\n\\def \\covidsimfiles {%d}\n\\def \\covidsimdata{%s}\n", kloc(code), fileCount, byteStringUnits(bytes) > "../generated-covidsimSummary.tex"
+}
 }' data.tmp
 done | sort -f -t : -k 1 | sed s/_/\\\\_/g
 awk 'function round(value) { a=int(value); if(value-a>=0.5) a++; return a; }

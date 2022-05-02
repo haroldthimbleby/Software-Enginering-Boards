@@ -27,12 +27,18 @@ var descriptionsOfFields = {
         documentation: "Evaluator's notes about code",
         essential: 1
     },
+    codeURL: {
+        documentation: "URL (typically GitHub) for code repository"
+    },
     dataComment: {
         documentation: "Evaluator's notes about data",
         essential: 1
     },
     doi: {
         documentation: "DOI"
+    },
+    error: {
+        documentation: "Set to an error string if needed"
     },
     hasBreach: {
         documentation: "Paper breaches journal code policy (see section~\\ref{supplementary-journal-policies-section})",
@@ -46,65 +52,65 @@ var descriptionsOfFields = {
         documentation: "Journal has a code policy (see section~\\ref{supplementary-journal-policies-section})",
         flag: "$\\sf P_c$"
     },
-    hasDirectCode: {
-        documentation: "Paper or URL provides source code",
-        flag: "$\\sf S_{+}$"
+    hasCodeRepo: {
+        documentation: "Paper uses a code repository (e.g., GitHub)",
+        flag: "$\\sf R_c$"
     },
-    codeURL: {
-        documentation: "URL (typically GitHub) for code repository"
+    hasCodeTested: {
+        documentation: "Evidence that source code has been run with a clean build and tested",
+        flag: "$\\sf S_{\\mbox{\\scriptsize tested}}$"
     },
     hasDataRepo: {
         documentation: "Paper uses a data repository (e.g., Dryad, Figshare, GitHub)",
         flag: "$\\sf R_d$",
         dataFlag: 1 // this flag is for the data comment (defaults to code flag)
     },
-    hasCodeRepo: {
-        documentation: "Paper uses a code repository (e.g., GitHub)",
-        flag: "$\\sf R_c$"
-    },
     hasDevelopedRigorously: {
         documentation: "Evidence that source code was developed rigorously",
         flag: "$\\sf S_{{\\mbox{\\scriptsize rigorous}}}$"
     },
-    hasToolBasedDevelopment: {
-       documentation: "Evidence of any tool-based development",
-        flag: "$\\sf S_{{\\mbox{\\scriptsize tools}}}$"
+    hasDirectCode: {
+        documentation: "Paper or URL provides source code",
+        flag: "$\\sf S_{+}$"
+    },
+    hasEmptyRepo: {
+        documentation: "Code repository contains no code",
+        flag: "$\\sf R_{\\mbox{\\scriptsize c-empty}}$"
+    },
+    hasGoodComment: {
+        documentation: "Helpful comments explaining code intent, rather than rephrasing the code",
+        flag: "$\\sf C_2$"
+    },
+    hasNoCode: {
+        documentation: "No code available at all (note: code is not expected for standard models, systems or statistical methods)",
+        flag: "$\\sf S_{\\mbox{\\scriptsize NONE}}$"
+    },
+    hasNoComment: {
+        documentation: "Code has no non-trivial comments",
+        flag: "$\\sf C_0$"
     },
     hasOpenSourceDevelopment: {
-       documentation: "Team or open source development",
+        documentation: "Team or open source development",
         flag: "$\\sf S_{{\\mbox{\\scriptsize open source}}}$"
     },
     hasOtherTechniques: {
         documentation: "Other evidence of good practice; see details in summary table",
         flag: "$\\sf S_{{\\mbox{\\scriptsize otherSE}}}$"
     },
-    hasCodeTested: {
-        documentation: "Evidence that source code has been run with a clean build and tested",
-        flag: "$\\sf S_{\\mbox{\\scriptsize tested}}$"
-    },
-    hasGoodComment: {
-        documentation: "Helpful comments explaining code intent, rather than rephrasing the code",
-        flag: "$\\sf C_2$"
+    hasRAP: {
+        documentation: "Use of RAP/RAP* principles"
     },
     hasSubstantialcomment: {
         documentation: "Code has substantial, useful comments and documentation",
         flag: "$\\sf C_{+}$"
     },
+    hasToolBasedDevelopment: {
+        documentation: "Evidence of any tool-based development",
+        flag: "$\\sf S_{{\\mbox{\\scriptsize tools}}}$"
+    },
     hasTrivialComment: {
         documentation: "Code only has trivial comments (e.g., copyright)",
         flag: "$\\sf C_1$"
-    },
-    hasNoComment: {
-        documentation: "Code has no non-trivial comments",
-        flag: "$\\sf C_0$"
-    },
-    hasEmptyRepo: {
-        documentation: "Code repository contains no code",
-        flag: "$\\sf R_{\\mbox{\\scriptsize c-empty}}$"
-    },
-    hasNoCode: {
-        documentation: "No code available at all (note: code is not expected for standard models, systems or statistical methods)",
-        flag: "$\\sf S_{\\mbox{\\scriptsize NONE}}$"
     },
     journal: {
         documentation: "Journal",
@@ -133,9 +139,6 @@ var descriptionsOfFields = {
     year: {
         documentation: "Year published",
         essential: 1
-    },
-    error: {
-        documentation: "Set to an error string if needed"
     }
 };
 
@@ -330,7 +333,7 @@ var data = [{
     {
         accessed: "14 July 2020",
         doubleChecked: "19 January 2021",
-        authors: "Li MD, Chang K, Bearce B, Chang BY, Huang AJ, Campbell JP, Brown JM, Singh P, Hoebel KV,  Erdo{\\u g}mu\\c{s} D, Ioannidis S, Palmer W, Chiang MF, Kalpathy-Cramer J",
+        authors: "Li MD, Chang K, Bearce B, Chang BY, Huang AJ, Campbell JP, Brown JM, Singh P, Hoebel KV, Erdo{\\u g}mu\\c{s} D, Ioannidis S, Palmer W, Chiang MF, Kalpathy-Cramer J",
         year: 2020,
         title: "Siamese neural networks for continuous disease severity evaluation and change detection in medical imaging",
         volume: 3,
@@ -870,8 +873,8 @@ for (var i = 0; i < data.length; i++) {
             error(i, "If it has code, it must have type of comment information set");
         if (isTrue(d.hasNoCode))
             error(i, "Can't have hasNoCode if any code flag is set");
-    } else if( isTrue(d.hasOpenSourceDevelopment) )
-    	error(i, "How can you have team or open source development without any code?");
+    } else if (isTrue(d.hasOpenSourceDevelopment))
+        error(i, "How can you have team or open source development without any code?");
     if (isFalse(hasVisibleCode) && (d.hasCodeTested || d.hasDevelopedRigorously))
         error(i, "Can only have hasCodeTested, or hasDevelopedRigorously set if it has visible code");
     if (isFalse(hasVisibleCode) && d.hasDevelopedRigorously)
@@ -962,7 +965,7 @@ for (var i in descriptionsOfFields)
     if (definedq(descriptionsOfFields[i].flag) && !flagOrder.includes(i))
         error(-1, "** flag " + i + " is not in flagOrder[]");
 
-// check all flags in flagOrder are in descriptionsOfFields
+    // check all flags in flagOrder are in descriptionsOfFields
 for (var i = 0; i < flagOrder.length; i++) {
     var f = flagOrder[i];
     if (!definedq(descriptionsOfFields[f]))
@@ -1124,16 +1127,31 @@ function fixAuthors(s) {
     var fa = "";
     var prefix = "";
     for (var i = 0; i < a.length; i++) {
-        fa += prefix + a[i];
+    	a[i] = a[i].trim();
+	    // a[i] is in the format: Kaminsky ZA
+		// we change it to {\sc Z. A. Kaminsky}
+        fa += prefix;
+        var lastSpace = a[i].length-1; 
+        while( lastSpace >= 0 && a[i].charAt(lastSpace) != " " ) lastSpace--;
+        for( var k = lastSpace+1; k < a[i].length; k++ )
+        {	fa += a[i].charAt(k);
+        	if( a[i].charAt(k+1) == "-" ) { 
+				fa += a[i].charAt(++k);
+        		continue;
+			}
+			fa +=  ". ";
+        }
+		for( var k = 0; k < lastSpace; k++ )
+        	fa += a[i].charAt(k);
         prefix = ", ";
         if (i + 1 >= maxAuthors && i + 1 < a.length) {
             fa += ", \\emph{et al}";
             break;
         }
         if (i == a.length - 2)
-            prefix = " and ";
+            prefix = ", and ";
     }
-    return fa;
+    return "{\\sc "+ fa + "}";
 }
 
 // generate bibliography for assessments
@@ -1170,6 +1188,7 @@ t.hasDevelopedRigorously = 0;
 t.hasToolBasedDevelopment = 0;
 t.hasOtherTechniques = 0;
 t.hasOpenSourceDevelopment = 0;
+t.hasRAP = 0;
 
 for (var i = 0; i < data.length; i++) { // calculate totals
     for (var j in t)
@@ -1191,6 +1210,7 @@ function NandPercent(n, outOf) {
     var r = Math.round(100 * n / outOf);
     return "{" + n + "}&{" + r + "\\%}";
 }
+
 function changeNandPercent(n, outOf) {
     var r = Math.round(100 * n / outOf);
     return "{\\begin{change}" + n + "\\end{change}}&{\\begin{change}" + r + "\\%\\end{change}}";
@@ -1222,6 +1242,10 @@ s += "No usable comments&" + percent(N - t.hasTrivialComment - t.hasGoodComment 
 s += "\\multicolumn{4}{|l|}{\\textbf{Repository use}}\\\\\n";
 s += "Code repository (e.g., GitHub) --- " + t.hasEmptyRepo + (t.hasEmptyRepo == 1 ? " was" : " were") + " empty&" + percent(t.hasCodeRepo, N) + "&\\\\\n";
 s += "Data repository (e.g., Dryad or GitHub)&" + percent(t.hasDataRepo, N) + "&\\\\\\hline\n";
+
+s += "\\multicolumn{4}{|l|}{{\\textbf{Evidence of automated processes}}}\\\\\n";
+s += "Evidence of RAP/\\RAPstar\\ or similar principles in use&" + NandPercent(t.hasRAP, N) + "&\\\\\\hline\n";
+
 
 s += "\\multicolumn{4}{|l|}{\\textbf{Adherence to journal code policy (if any)}}\\\\\n";
 s += "Papers published in journals with code policies&" + percent(t.hasCodePolicy, N) + "&\\\\\n";
@@ -1333,4 +1357,3 @@ saveFile("generated-open-doi.sh", s, "Shell script to open all DOIs");
 console.log("\n" + (!errorCount ? "** No noticed errors to report" : ("** " + plural(errorCount, "error") + " reported")));
 
 console.log("\n" + (!warnCount ? "** No noticed warnings to report" : ("** " + plural(warnCount, "warning") + " reported")));
-

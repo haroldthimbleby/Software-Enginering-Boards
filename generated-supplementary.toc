@@ -1,35 +1,38 @@
-\contents{1 Further issues for Software Engineering Boards (SEBs)}{32}
-\subcontents{a\ {Brief definition}}{32}
-\subcontents{b\ Relationships of SEBs to Ethics Boards}{33}
-\subcontents{c\ {SEBs are necessary but not sufficient}}{34}
-\contents{2 Software engineering best practice}{34}
-\subcontents{a\ Introduction and standard references}{34}
-\subcontents{b\ Essential components of best practice}{34}
-\subcontents{\hbox to \howwide {\hfill (0)} Requirements}{35}
-\subcontents{\hbox to \howwide {\hfill (1)} {Formal methods}}{35}
-\subcontents{\hbox to \howwide {\hfill (2)} Defensive programming}{36}
-\subcontents{\hbox to \howwide {\hfill (3)} {Using dependable programming languages}}{37}
-\subcontents{\hbox to \howwide {\hfill (4)} Open source and version control}{37}
-\subcontents{\hbox to \howwide {\hfill (5)} Rigorous testing}{38}
-\subcontents{\hbox to \howwide {\hfill (6)} {Good documentation and record keeping}}{39}
-\subcontents{\hbox to \howwide {\hfill (7)} Usability}{39}
-\subcontents{\hbox to \howwide {\hfill (8)} Reusing quality solutions}{40}
-\subcontents{\hbox to \howwide {\hfill (9)} Simplicity}{40}
-\subcontents{\hbox to \howwide {\hfill (10)} {Compliance with standards}}{41}
-\subcontents{\hbox to \howwide {\hfill (11)} Effective multidisciplinary teamwork}{41}
-\subcontents{\hbox to \howwide {\hfill (12)} {Continuous Professional Development (CPD)}}{42}
-\subcontents{\hbox to \howwide {\hfill (13)} {Security and other factors}}{42}
-\contents{3 Code, data and publication}{43}
-\contents{4 {The Speigelhalter trustworhiness questions}}{46}
-\subcontents{a\ {How trustworthy are the numbers?}}{46}
-\subcontents{b\ {How trustworthy is the source?}}{47}
-\subcontents{c\ {How trustworthy is the interpretation?}}{47}
-\contents{5 {Summary of pilot survey}}{50}
-\subcontents{a\ {Assessment criteria and methods}}{50}
-\subcontents{b\ {Detecting and defending against error}}{53}
-\subcontents{c\ {Defending against system problems}}{54}
-\subcontents{d\ {Problems of restrictive journal policies}}{55}
-\subcontents{e\ {Code policies of sampled journals}}{55}
-\subcontents{f\ {Sample assessments and criteria}}{57}
-\subcontents{g\ {Summary of assessments}}{60}
-\subcontents{h\ {References for sampled papers}}{61}
+\contents{1 Further issues for Software Engineering Boards (SEBs)}{21}
+\subcontents{a\ {Brief definition}}{21}
+\subcontents{b\ Relationships of SEBs to Ethics Boards}{21}
+\subcontents{c\ {SEBs are necessary but not sufficient}}{22}
+\contents{2 Software engineering best practice}{22}
+\subcontents{a\ Introduction and standard references}{22}
+\subcontents{b\ Essential components of best practice}{22}
+\subcontents{\hbox to \howwide {\hfill (0)} Requirements}{23}
+\subcontents{\hbox to \howwide {\hfill (1)} {Formal methods}}{23}
+\subcontents{\hbox to \howwide {\hfill (2)} Defensive programming}{24}
+\subcontents{\hbox to \howwide {\hfill (3)} {Using dependable programming languages}}{24}
+\subcontents{\hbox to \howwide {\hfill (4)} Open source and version control}{24}
+\subcontents{\hbox to \howwide {\hfill (5)} Rigorous testing}{25}
+\subcontents{\hbox to \howwide {\hfill (6)} {Good documentation and record keeping}}{25}
+\subcontents{\hbox to \howwide {\hfill (7)} Usability}{26}
+\subcontents{\hbox to \howwide {\hfill (8)} Reusing quality solutions}{26}
+\subcontents{\hbox to \howwide {\hfill (9)} Simplicity}{26}
+\subcontents{\hbox to \howwide {\hfill (10)} {Compliance with standards}}{27}
+\subcontents{\hbox to \howwide {\hfill (11)} Effective multidisciplinary teamwork}{27}
+\subcontents{\hbox to \howwide {\hfill (12)} {Continuous Professional Development (CPD)}}{27}
+\subcontents{\hbox to \howwide {\hfill (13)} {Security and other factors}}{27}
+\subcontents{\hbox to \howwide {\hfill (14)} {Software is a human activity}}{28}
+\contents{3 Code, data and publication}{29}
+\contents{4 {The Speigelhalter trustworthiness questions}}{31}
+\subcontents{a\ {How trustworthy are the numbers?}}{31}
+\subcontents{b\ {How trustworthy is the source?}}{31}
+\subcontents{c\ {How trustworthy is the interpretation?}}{32}
+\contents{5 {A pilot survey of computational science}}{34}
+\subcontents{a\ {Selected journal case studies}}{34}
+\subcontents{b\ {Pilot paper sample}}{35}
+\subcontents{c\ {Summary of results}}{37}
+\subcontents{d\ {Current code policies of sampled journals}}{38}
+\subcontents{e\ {Assessment criteria and methods}}{39}
+\subcontents{f\ {Detecting and defending against error}}{41}
+\subcontents{g\ {Defending against system problems}}{42}
+\subcontents{h\ {Problems of restrictive journal policies}}{42}
+\subcontents{i\ {Sample assessment and scoring}}{43}
+\subcontents{j\ {References for sampled papers}}{45}

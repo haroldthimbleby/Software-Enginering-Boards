@@ -1,14 +1,13 @@
 \iftrue
     \PassOptionsToPackage{hyphens}{url}
-    \documentclass[10pt,letterpaper]{article}
+    \documentclass[10pt,a4paper]{article}
     
-    \usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
-    % Use adjustwidth environment to exceed column width (see example table in text)
-    \usepackage{changepage}
+    \usepackage[text={6.5in,10in},centering]{geometry}
+    %\usepackage{changepage}
     
     % line numbers
-    \usepackage[right]{lineno}
-    \linenumbers
+    %\usepackage[right]{lineno}
+    %\linenumbers
     
     \renewcommand\thesubsection{\thesection.\alph{subsection}}
     %\usepackage{hyperref}
@@ -32,10 +31,12 @@
       \newcount\mainNumberOfReferences \mainNumberOfReferences=0
       \def\bibcite#1#2{\global\advance\mainNumberOfReferences by 1\oldbibcite{#1}{#2}}
       \input paper-seb-main.aux 
-      \resetlinenumber[\MainPaperLastLine]
-      }
+      %\resetlinenumber[\MainPaperLastLine]
+}
       
 \makeatother
+
+\input generated-page-lengths.tex
 
 \begin{document}
 
@@ -111,7 +112,7 @@
 \def\highlightsec#1#2#3{\sec{#1}{{#2}}{{#3}}}
 \def\highlightmysubsection#1{\subsection{{#1}}\subsectioncontents{{#1}}}
 \def\changemysubsection#1{\subsection{{#1}}\subsectioncontents{{#1}}}
-\def\changemysection#1{\section{{#1}}\sectioncontents{{#1}}}
+\def\changemysection#1{\vskip 2ex\section{{#1}}\sectioncontents{{#1}}}
 \def\highlightmysection#1{\section{{#1}}\sectioncontents{{#1}}}
 \def\mysection#1{\section{#1}\sectioncontents{#1}}
 \def\mysubsection#1{\subsection{#1}\subsectioncontents{#1}}
@@ -207,7 +208,9 @@ SEBs address the problems identified at the laboratory end of doing science; the
 
 This \supplement\ provides more explanations and justification for following standard software engineering practices that support reliable modeling, reliable research, and, most generally, reliable science. 
 
-The reader is referred to standard textbooks for more information \citeeg{sommerville,knight}, as well as to specialized texts that are more specifically addressed to software engineering in science \citeeg{cosmos}.
+The reader is referred to standard textbooks for more information \citeeg{sommerville,knight}, as well as to specialized texts that are more specifically addressed to software engineering in science \citeeg{cosmos}. Written and maintained by a team of experts, a substantial and wide-ranging reference is the Software Engineering Body of Knowledge (SWEBOK) \cite{swebok}, recognized as International Standards Organization Technical Report 19759.
+
+The Turing Institute has an excellent open resource \cite{turing-way}, though it emphasizes RAP for handling data and authoring papers rather than for programming reliably.
 
 The book \emph{Why Programs Fail\/} \cite{wpf} is a very good practical guide to developing better code, and will be found very accessible. Humphrey \cite{humphrey} outlines a thorough discipline for anyone wanting to become a good programmer. Improvement is such an important activity, Humphrey has also published a book to persuade managers of the benefits \cite{managers}. Further suggestions for background reading can be found throughout this section.
 
@@ -235,7 +238,7 @@ In practice, requirements and expectations change. Early experimental code, deve
 
 Formal methods require sophisticated knowledge of logic \cite{cbc}, as well as practical knowledge of using appropriate formal methods tools (Alloy, HOL, PVS, SPARK, and \emph{many\/} others). Using the right tools is essential for reliable programming, because the tools do quickly and reliably what, done by hand, would be slow and error-prone. Standard tools cover verification, static analysis of code, version control, documentation, and so on --- this paper explains why some of these activities are essential for reliable programming below. 
 
-Crucially, tools are designed to catch common human errors that we are all prone to. Many tools are designed to avoid common human errors arising \emph{in the first place\/}; notably, the MISRA C toolset simply stops the developer using the most error-prone features of normal C, and hence improves the quality of programming with little effort.
+Crucially, tools are designed to catch common human errors that we are all prone to. Many tools are designed to avoid common human errors arising \emph{in the first place\/}; notably, the MISRA C toolset simply stops the developer using the most error-prone features of normal C, and hence improves the quality of programming with little effort \cite{misra}.
 
 Many programming languages and programming environments have integrated features that support formal methods. For example, Hoare's triples \cite{hoare} (and formal thinking based on similar ideas) are readily supported by assertions, as either provided explicitly in a programming language or through a simple API\@. In particular, assertions readily support contracts, an important rigorous way of programming: assertions allow the program, the programming language, or tools (as the case may be) to automatically (and hence rigorously) check essential details of the program. Hoare's original 1969 paper \cite{hoare} is very strongly recommended because it is a classic paper that has stood the test of time; in the 1960s it was leading research, but now it can be read as an excellent introduction, given how the field of software engineering has advanced and become more specialized and sophisticated over the decades since. Hoare is also a very good writer.
 
@@ -338,9 +341,31 @@ Note that CPD is not just a matter of learning current best practice, but a cont
 \highlightsec{13}{Other factors \ldots}{Security and other factors}
 Of course, there are many other factors to be considered for the professional development of critical code, such as using appropriate methods to ensure cybersecurity \cite{security-engineering,cyber-cacm}, particularly while also being able to up- and download secure updates.
 
-For pandemic modeling specifically, understanding the limitations of numerical methods (in particular, how numerical methods are affected by the choice of programming language and style of programming) is critical.\footnote{{For example \cite{example-numerical-error} was noticed to use literal numbers at too high a precision for the chosen language, where conformant implementations use IEEE 754 double precision 64-bit floating point. Such an error typically has an undefined impact on results, and unfortunately is easy to overlook as the program almost certainly ignores the error when running.}} Hamming \cite{hamming} is considered a classic, but there is a huge choice available.
+For pandemic modeling specifically, understanding the limitations of numerical methods (in particular, how numerical methods are affected by the choice of programming language and style of programming) is critical.\footnote{{For example, one of the surveyed paper's code \cite{example-numerical-error} uses literal numbers at far too high a precision for the chosen language to be able to represent correctly (conformant implementations use IEEE 754 double precision 64-bit floating point). Such an error typically has an undefined impact on results, and unfortunately is easy to overlook as the program almost certainly ignores the error when running. The error belies misunderstandings in programming which may have wider effects, such as consequences of relying on the precision being higher than it is.}} Hamming \cite{hamming} is considered a classic, but there is a huge choice available.
 
 {For reasons of space, the present paper does not discuss the issues raised by AI, nor the many very important, non-trivial social and professional concerns, which have complex implications for software engineering practice, such as managing programming teams, data ethics, privacy, legal liability \cite{Schneier}, or software as a matter in law, as in disputes over model results or disputes over ownership of code \cite{electronic-evidence}.}
+
+\highlightsec{14}{Human Factors are the foundation of everything}{Software is a human activity}
+
+Software is a human activity, and humans are fallible. Even the Software Engineering methodologies to developer better software are themselves human constructs, and are therefore subject to the same fallibilities.
+
+People would generally not make software errors if there were aware they were making errors. Unfortunately programming is a very demanding activity, which causes tunnel vision (also known as loss of situational awareness). Humans have limited cognitive capacity, and programming (especially programming in a competitive environment, like science) drives programmers to use as much of their cognitive skills for the task in hand. The consequence is programmers focus on ``the'' problem as it appears in the code, and inevitably become unaware they are not considering wider issues. The correctness, generality, ethics, and usability of a program are therefore often unintentionally sacrificed to making code work at all. 
+
+Confirmation bias is a standard Human Factors problem \cite{fixit}, which encourages us to perform tests that show our programs work. Instead, we should be rigorously testing ways in which programs can fail as well. This is exactly the same issue pointed out by Popper \cite{popper}: scientists should experiment to find reasons why hypotheses are false, and indeed use simple hypotheses that are testable. Software is really no more than a collection of sophisticated hypotheses, and Computer Science is a science of the artificial \cite{simon-artificial}.
+
+Standard Human Factors mitigations for such problems include team working, with appropriate precautions to manage authority gradients (where the Human Factors oversights of the leader influence the team). Many computerized mitigations are also available --- strong typing, code analyzers, formal methods, and so on, as described in this section of the \supplement.
+
+Following the Dunning-Kruger Effect \cite{dunning-kruger,dunning-kruger-numeracy}, programmers over-estimate their programming skills because they do not have the skills to recognize their lack of knowledge, specifically in the present case, knowledge of basic software engineering. Dunning and Kruger go on to say,
+
+\begin{quote}\sf\raggedright\setbox0=\hbox{``}\hskip -\wd0\copy0 People usually choose what they think is the most reasonable and optimal option \hbox{[\hskip 2pt\ldots]} The failure to recognize that one has performed poorly will instead leave one to assume that one has performed well; as a result, the incompetent will tend to grossly overestimate their skills and abilities. \hbox{[\hskip 2pt\ldots]} Not only do these people reach erroneous conclusions and make unfortunate choices, but their incompetence robs them of the metacognitive ability to realize it.''\end{quote}
+
+Unlike many skills (skating, brain surgery, \ldots) programming, typical of much engineering, is one where errors can go unnoticed for long periods of time --- things seem to work nicely right up to the moment they fail. The worse programmers are, the more trivial bugs they tend to make, but trivial bugs are easy to find so, ironically, being a poor programmer \emph{increases\/} one's self-assessment because debugging seems very productive. It is easy for poor programmers and their associates to believe they are better than they actually are, fertile ground for the better-than-average bias \cite{dunning-kruger}.
+
+It sounds harsh to call programmers incompetent, but challenged with the complexity of programs and the complexity of the domains programs are applied in, we are all incompetent and succumb to the limitations of our cognitive resources, suffering blindspots in our thinking \cite{fixit}. We \emph{all\/} make mistakes we are unaware of. If we do not have the benefit of professional qualifications that have assessed us objectively, we generally have a higher opinion of our own competence than is justified. Moreover, if we do not work in a diverse team, nobody will ever point this out, so the potential problems it causes will never be addressed.
+
+{Everyone is subject to Human Factors (including the author of the present paper, e.g., as discussed in \cite{enigma}): for instance, the standard cognitive bias of confirmation bias encourages us to look for bugs when code fails to do what is expected and then debug it to produce better results, but if code generates expected results not to bother to debug it further. This of course tends to make code increasingly conform to prior expectations, whether or not those expectations are scientifically justified. Typically, there was no prior specification of the code, so the code should be right, especially after all the debugging to make it ``correct''! Thus coding routinely suffers from HARKing (Hypothesizing After the Results are Known \cite{harking}), a methodological trap widely recognized in statistics.}
+
+Computers themselves are also a part of the problem. Na\"\i vely modifying a program (as may occur during debugging) typically makes it more complex, more \emph{ad hoc}, and less scrutable. Programs can be written so that it is not possible to determine what they do or how they do it (whether by deliberate obfuscation, as in malware, or accidentally), except by running them, if indeed it is possible to exactly reproduce the necessary context to do so \cite{framework}. The point is, introducing bugs should be avoided so far as possible in the first place, and programs should routinely have assertions and other methods to detect those bugs that are introduced (see this paper's \supplement\ for more discussion of standard programming methodologies).
 
 \mysection{Code, data and publication}
 \immediate\write\infofile{\bslash newlabel{on-code-data-publication}{{\arabic{section}}{\thepage}{XXX}{YYYY}{ZZZZ}}}
@@ -396,7 +421,7 @@ AI and Machine Learning are further examples of exploiting data as code. Typical
 
 \subsection{Exploiting code as data for more reliable science}
 \end{change}\noindent
-In the present paper, we knowingly built on this blur between data and code. However, what we did was not unusual except in our explicit and rigorous approach to managing and summarizing data reliably in the paper.
+In the present paper, we knowingly built on this blur between data and code, a special case of \RAPstarp. However, what we did was not unusual except in our explicit and rigorous approach to managing and summarizing data reliably in the paper.
 
 The paper and its \supplement\ are typeset in \LaTeX, a popular typesetting language. \LaTeX\ not only has text (as you are reading right now) but it also has code. For example, ``\LaTeX'' was typeset by running the code for a macro called \verb|\LaTeX|, which then calculated how to position the letters as they are wanted. When $\pi$ was written above, the code that generated what you read actually said \verb|$\pi$| --- so is this data that just says $\pi$ or is it code that tells the computer to change character sets from Latin to Greek, and then uses \verb|\pi| as a program variable name to select a particular glyph from the data about typesetting Greek characters? The distinctions are all a bit moot. In other words, the publication itself is data to a \LaTeX\ program, and within that data it includes further programs. Indeed, \LaTeX\ is run on a virtual machine, in exactly the same way that Henderson's LISP is, and doing so provides the same advantages.
 
@@ -406,7 +431,7 @@ The data for this paper's survey was itself originally written as literal text i
 
 Finally note that what may look like magic numbers used throughout the present paper (such as the $\the\dataN$, as in ``\plural{\dataN}{paper} were evaluated'') are all in fact named, calculated and placed \emph{in situ\/} directly from computations performed on the JSON paper's data.
 
-\changemysection{The Speigelhalter trustworhiness questions}
+\changemysection{The Speigelhalter trustworthiness questions}
 \globalLabel{supplementary-Speigelhalter-section}
 
 David Speigelhalter is concerned how statistics is often misused and misunderstood. In his \emph{The Art of Statistics\/} \cite{Speigelhalter} Speigelhalter brings together his advice for making reliable statistical claims: they need to be accessible, intelligible, assessable, and usable --- the claims need to be properly accountable. Speigelhalter proposes ten questions to ask when confronted with any claim based on statistical evidence. Some of his questions are quite general, and might be applied to any sort of scientific claims, but all have analogous questions that could be addressed to software code or papers relying on code --- analogues are suggested in \textbf{bold} below. 
@@ -477,7 +502,7 @@ What might seem like dauntingly technical software issues are no more demanding 
 \newcount\temporaryPlusOne \temporaryPlusOne=\temporary
 \advance \temporaryPlusOne by 1
 
-\bibliographystyle{plos2015}
+\bibliographystyle{mysiam}
 
 \global \newdimen \shortercol 
 \renewenvironment{thebibliography}[1]{%
@@ -507,9 +532,218 @@ What might seem like dauntingly technical software issues are no more demanding 
 
 \bibliography{paper-seb-supplementary-material.bib}
 
-\highlightmysection{Summary of pilot survey}
+\highlightmysection{A pilot survey of computational science}
+\globalLabel{survey-section}
+
+There are many ways to do good science. Normal science routinely involves either performing new research and reporting it in the literature, or performing reviews --- such as systematic reviews --- of the existing literature to form a consensus view of an existing body of research. Typically, research offers new theories or results, points out previous errors, or uses statistical or qualitative methods to reduce the variability in previously reported results. In any case, the intention is to provide reliable knowledge and to bolster consensus \cite{ziman}.
+
+%In the present case, we have identified limitations in the methodology of certain scientific contributions, throwing doubt on their soundness and reliability; furthermore, we identified critical misunderstandings in the literature citing those papers, including misunderstanding the nature of code reproducibility. 
+
+%It is possible, if not likely (e.g., given the report in \emph{Nature\/}, cited above \cite{nature-review}), that such limitations are more widespread than the specific examples considered so far, which are anyway limited primarily to epidemiology, and to COVID research performed under extreme pandemic pressure. We now therefore undertake a small, manageable stratified sample of peer reviewed literature to explore whether the issues are more widespread.
+
+\highlightmysubsection{Selected journal case studies}
+
+The journal \emph{The Lancet\/} published and then subsequently retracted a paper on using hydroxychloroquine as a treatment for COVID \cite{lancet-retracted}. The paper was found to rely on fraudulent data \cite{science-lancet1,science-lancet2}. \emph{The Lancet\/} subsequently tightened its data policies \cite{lancet-learning}, for instance to require that more than one author must have directly accessed and verified the data reported in the manuscript. Curiously, the original (now retracted) paper declares 
+\begin{quote}\sf
+\setbox0=\hbox{``}\hskip -\wd0\copy0 \ldots\ all authors participated in critical revision of the manuscript for important intellectual content. MRM and ANP supervised the study. All authors approved the final manuscript and were responsible for the decision to submit for publication.'' \end{quote} 
+
+which seems to suggest that several original authors of the paper would have been happy to make the new declarations --- and, of course, if there is fraud (as was established in this case) it seems likely that authors who make the new declarations of accessing and verifying data are unlikely to make reliable declarations. 
+
+\emph{The Lancet\/} still has no code publication policy, and for more than one author to have ``direct access'' to the data they are very likely to access the data through the same code. If the code is faulty or fraudulent, an additional author's confirmation of the data is insufficient, and there is at least as much reason for code to be fraudulent (not least because code is much harder to scrutinize than data). Code needs more than one author to check it, and ideally reviewers independent of the authors so they do not share the same assumptions and systems (for instance shared libraries, let alone potential collusion in fraud).
+
+In 2020 the \emph{Journal of Vascular Surgery\/} published a research paper \cite{jvs1}, which had to be retracted on ethical grounds \cite{jvs2,jvs3}: it was a na\"\i ve study and the editorial process was unaware of digital norms. Notably, the paper fails to provide access to its anonymized data (with or without qualification), and fails to define the data anonymization algorithm, and also fails to even mention the code that it developed and used to perform its study. The journal's data policy is itself very weak (the authors ``should consider'' including a footnote to offer limited access to the data) and, despite basic statistics policies, it has no policy at all for code (see  section \ref{supplementary-journal-policies-section}). Ironically, the retracted article \cite{jvs1} is still online (as of August 2020) with no reference to any editorial statement to the effect that it has been retracted, despite this being trivial --- and necessary --- to achieve in the widely-accessed online medium.
+
+Medical research often aims to establish a formula to define a clinical parameter (such as body mass index, BMI) or to specify an optimal drug dose or other intervention for treatment. These formulas, for which there is conventional clinical evidence, are often used as the basis for computer code that provides advice or even directly controls interventions. Unfortunately a simple formula as may be published in a medical paper is \emph{never\/} sufficient to specify code to implement it safely. For example, clinical papers do not need to evaluate or manage user error when operating apps, and therefore the statistical results of the research will be idealistic compared to the outcomes using an app under real conditions --- which is what the clinical research is supposedly for. A widespread bug (and its fix) that is often overlooked is discussed in \cite{numerals}; the paper includes an example of a popular clinical calculator (based on published clinical research) that calculated nonsense, and potentially dangerous, results. The paper \cite{fda} summarizes evidence that such bugs, ignored by the clinical research literature, are commonplace in medical systems and devices.
+
+\highlightmysubsection{Pilot paper sample}
+A sample of \plural{\dataN}{recent paper} covering a broad range of science were sampled from the leading journals \journalBreakdown. 
+
+\makeatletter
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#1: #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    \textbf{#1}: #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{|rl|} \hline
+\the\numberOfJournals&Journals\\
+\the\dataN&Papers:\\
+\tabularJournalBreakdown
+\the\countAuthors&Published authors\\
+\the\totalPages&Published journal pages\\
+July 2020&Sample month\\ \hline
+\end{tabular}
+\end{center}
+
+%\newcount \total
+%\total=\dataN
+%\multiply \total by 4 % three reviewers, one editor
+%\advance \total by \countAuthors
+%\the\total\
+%leading scientists assuming authors, 1 editor, and 3 reviewers per paper, but not counting acknowledged colleagues et al, covering  (plus appendices and supporting material) in total.
+%
+\caption{Overview of peer-reviewed paper sample.}
+\label{table-overview}
+\end{table*}
+
+\begin{table*}
+\begin{center}\normalsize
+\input generated-summary-table.tex
+\end{center}
+
+\caption{Summary of survey results.}
+\label{table-summary}
+\end{table*}
+
+\begin{table*}[t]
+
+\def\reponame#1#2{{\tt #1} \csname cite-#2\endcsname}
+
+\expandafter\def\csname pagelength-covid-sim\endcsname{20}
+\expandafter\def\csname cite-covid-sim\endcsname{\cite{ICmodel}}
+
+% divide #1 by #2
+\newcount \uu
+\newcount \vv
+\def\makeAverage#1#2{%
+	\uu=#1
+	\vv=#2
+	\divide \uu by \vv
+	\the\uu
+}
+
+\begin{center}
+
+\expandafter \advance \gitPages by \csname pagelength-covid-sim\endcsname
+
+\input generated-repos.tex
+\vskip 1ex
+\small Citation numbers $>$ \MaxMainPaperCitationNumber\ can be found in the \supplement
+\\
+\small Repository clones downloaded and automatically summarized \clonedate
+\end{center}
+
+\caption{Sizes of repositories, with approximate sizes of code (in kLOC) and data for all available GitHub repositories reviewed in the survey, plus \texttt{covid-sim} \cite{ICmodel} for comparison. Sizes are approximate because in all repositories code and data are conceptually interchangeable (an issue explained in the \supplement), so choices were made in the survey to avoid double-counting. Many repositories rely on downloading additional code and data, which is not counted in the table as the additional required material is not in the repository cited in the paper.  At the time of cloning and checking all repositories in \clonewhen, paper \csname cite-PostoperativeOutcomes.RiskNet\endcsname\ still had nothing in its repository except a single file still saying ``...code coming soon...,'' despite \the\pubdelayinmonths\ months having already elapsed since the submitted paper had claimed the code could be accessed in its repository.}
+\label{table-repo-summary}
+\end{table*}
+
+The two journals \emph{Nature Digital Medicine\/} and \emph{Lancet Digital Health\/} were selected as leading specialist science journals in an area where correctness of scientific modeling has safety-critical implications, and \emph{Royal Society Open Science\/} was selected as a leading general science journal. All papers sampled are Open Access, although for some papers some or all of the associated data has \begin{change}no or\end{change} restricted access, \begin{change}in some cases despite the relevant journal policies on code\end{change}. Table \ref{table-overview} is an overview of the sample.  
+
+Papers were selected from the journals' July 2020 \begin{change}then\end{change} new online listings where the paper's title implied that code had been used in the research. Commentary, correspondence, and editorials were excluded. The sample is intended to be large enough and objective enough to avoid the selection bias in the papers that motivated the current paper (the sample excludes the motivating papers discussed above as they were not published in the sampled journals), so that the sample may be considered to fairly represent what the editorial and the broader peer review community in leading journals considers to be good practice for computationally-based science. The selection criterion selected papers where the title implies the authors themselves considered code to be a significant component of the scientific contribution, and, indeed, all sampled papers relied on and assumed the quality of code used in their research. 
+
+\begin{change}
+This convenience sample may be considered to be small given the importance of the research questions and relative to the diversity and huge number of scientific papers,\footnote{\begin{change}Using Google Scholar it is estimated that over 40,000 papers meeting the title criteria were published in the month of July 2020.\end{change}} but~\ldots
+
+\begin{enumerate}
+\item the selected journals are leading peer-reviewed scientific journals that set the standards for scientific publishing practice generally (although the sample shows that code policies are not always enforced); 
+
+\item as will be clear from the following discussion, there is little variation across the sample, which implies that a larger sample would not have been productively more insightful (this view is consistent with the multi-disciplinary reports in \cite{nature-review}, mentioned in section \ref{section-science-beyond-pandemic-modeling}); 
+
+\item the survey is not intended to be a formal, systematic sample of scientific research in general, but is intended to be sufficient to dispel the possibility that the issues described above earlier in this paper are isolated practice unique to a few papers in epidemiology, perhaps an idiosyncrasy of a few authors in a particular field, or perhaps due to an initial chance selection bias (e.g., the Ferguson papers were reviewed above because of Ferguson's public profile and the importance of dependable pandemic research, but they might have just happened to be software engineering outliers);
+
+\item the code/data policies of the \plural{\numberOfJournals}{journal} condoned at the time of the sample \emph{and continue to condone\/} poor practice at the time of writing the present paper (\monthname{\month} \the\year) --- for specific details and further explanation of the problems, see \supplement\ section \ref{supplementary-journal-policies-section};
+
+\item
+the fact that the specifically identified problems are elementary errors in software engineering (see the discussion in section \ref{section-discussion}) suggests more sophisticated analysis is not required;
+
+\item 
+finally, the present paper's \LaTeX\ source, as well as all documented code and data, are available from a repository, which provides a convenient framework for easily refining or developing the research as may be desired (see details at the end of this paper).
+\end{enumerate}
+\end{change}
+
+The \the\dataN\ papers surveyed cover a range of specialities, and it is unlikely that non-specialists can properly assess the code from the point of view of the specialism, not least because many of the papers sampled require specialist code libraries (and in the right combinations of versions) to be run that not everyone will have or be able to install. Code quality was therefore assessed by reading it --- due to the paper authors' complex and/or narrative interpretation of data, code, data and hardware/operating system dependencies, no assessment \begin{change}could realistically be\end{change} made whether the code provided actually reproduced a paper's specific claims. Indeed, if we trust the papers that their code was actually run and provides the results as reported, then running their code (when provided in full) would merely check the paper/code consistency but will not assess the quality or reliability of the code. \begin{change}Indeed, in most scientific papers there are layers of expert scientific work, interpretation and abstraction, lying between the computational models and the report in the paper.\end{change}
+
+\highlightmysubsection{Summary of results}
+\label{summary-of-results}
+The sample selection criteria necessarily identified scientific research with software engineering contributions. 
+
+No evidence of verification and validation was seen. There was only one example of very basic software engineering methods, namely independent coding, and even then the independent code used for testing was not uploaded to the paper's code repository, so the independent testing is not available for reviewers or readers of the paper. (See \supplement\ for more details.)
+
+There was no evidence of any critical assessment of code, suggesting that scientists writing papers take it for granted that their code works as they intend. No competent programmer would take it for granted that their code was correct without following rigorous methods, such as formal methods, regression testing, test driven design, etc. (See the \supplement\ for a list of standard methods.)
+
+Much code depended on specific software versions, specific libraries, and substantial manual intervention to compile it. All code (where actually provided) was sufficiently complex that, if it was to be used or scrutinized, required more substantial documentation than was provided.
+
+On the whole, on the basis of the sample evidence, scientists do not make their code \emph{usably\/} available, and rarely provide adequate documentation (see table \ref{table-summary}). 
+
+With the one minor exception, no papers reported anything on any software engineering methodologies, which is astonishing given the scale of some of the software effort supporting the papers (table \ref{table-repo-summary}).  The papers themselves, typically only a few published pages, are very brief compared to the substantial code they rely on (see table \ref{table-repo-summary}). 
+
+With the one exception, none of the papers used any specific software engineering methods, such as open source \cite{open-source} or other standard methodologies provided in the \supplement, to help manage their processes and help improve quality. Although software stability \cite{stability} is a relatively new concept, understood as methodologies, such as portability, to provide long-term value of software, it is curious that none of the papers made any attempt at stability (however understood) despite the irony that all the papers were published in archival journals.\footnote{Reasons the present paper does not directly assess the quality of software in the surveyed papers include: many papers did not provide complete software; it was not possible to find correct versions of all software systems to run the models; also, no papers provided adequate test suites so that correct operation of software could be confirmed objectively.}
+
+\emph{Nature Digital Medicine\/} and \emph{Royal Society Open Science\/} have clear data and code policies (see \supplement\ section \ref{supplementary-journal-policies-section}), but actual publishing practice falls short: \the\countHasBreach\ out of the \plural{\countHasPolicy}{paper} (\pc{\countHasBreach}{\countHasPolicy}) published in them and sampled in the survey manifestly breach their code policies. In contrast, \emph{Lancet Digital Health\/}, despite substantial data policies, has no code policy at all to breach. The implication is that the fields, and the editorial expertise of leading journals, misunderstand and dismiss code policies --- they (or their editors and reviewers) are technically unable to assess them. This lack of expertise is consistent with the limited awareness of software engineering best practice that is manifest in the published papers (and resources) themselves.
+
+Code repositories were used by \plural{\countUsesVersionControlRepository}{paper} (\pc{\countUsesVersionControlRepository}{\dataN}), though \plural{\countNoCodeInRepo}{paper} in the survey claimed to have code on GitHub but there was no code in the repository, only the comment ``Code coming soon\ldots'' (checked at the time of doing the review, then double-checked as detailed in the references in the \supplement, as well as most recently on \clonedate\
+while checking table \ref{table-repo-summary}): in other words, the repository had never been used and the code could never have been looked at, let alone reviewed.\footnote{GitHub records show that it had not been deleted after paper submission.} This is a pity because GitHub provides help and targeted warnings and hints like ``No description, website, or topics provided [\ldots] no releases published.'' The lack of code is ironic: the paper concerned \csname cite-PostoperativeOutcomes.RiskNet\endcsname\ has as its title ``\emph{Development and validation\/} of a deep neural network model [\ldots]'' (our emphasis), yet it provides no code or development processes for the runnable model it claims to validate, so nobody else (including referees) can check any of the paper's specific claims.
+
+The sizes of all GitHub repositories are summarized in table \ref{table-repo-summary} (since many papers not using GitHub do not have all code available, non-GitHub code sizes are not easily compared and are not listed). 
+
+Overall, there was no evidence that any code had been developed carefully, {let alone by using recognized professional software engineering methods}. In particular, 
+\ifnum \countCodetested=0
+no papers
+\else only \plural{\countCodetested}{paper}
+\fi in the survey provide any claims or evidence of effective testing, for instance with evidence that tests were run on clean builds. {While it may sound unrealistic to ask for evidence on software quality in a paper written for another field of science, the need is no less than the need for standard levels of rigor in statistics reporting, as discussed in the opening of this paper.}
+
+Data repositories (the Dryad Digital Repository, Figshare or similar) were used by \plural{\counthasDataRepository}{paper} to provide structured access to their data. Unlike GitHub, which is a general purpose repository, Dryad has scientifically-informed guidelines on handling data, and all papers that used Dryad provided more than just their raw data --- they provided a little, sometimes substantial, documentation for their data. At the time of writing, Dryad is not helpful for managing code --- its model appears to be founded on the requirement that once published papers must refer to exactly the data they used, so further refinements on the data (or code) are taboo, even with version control.
+
+\highlightmysubsection{Current code policies of sampled journals}
+\globalLabel{supplementary-journal-policies-section}
+
+It is noteworthy that none of the journals sampled permit any reliable style of managing data in published papers, such as described above in sections \ref{detecting-against-error} and \ref{restrictive-policies}. In particular, for all the papers that had accessible code, the code included explicit (and relevant) data that was not archived \emph{as\/} data in the journal repositories.
+\\
+
+\newdimen\tabwidth
+\tabwidth=\textwidth
+\advance \tabwidth by -4em
+\def\specifyurl{\vskip 3mm
+\begingroup\raggedleft\scriptsize
+} 
+\def\specifyurletc#1{\endgroup\\
+\hbox{ }\hfill\begin{change}\begin{tabular}{|p{\tabwidth}@{}}
+#1
+\end{tabular}\end{change}\vskip .3cm
+}
+
+{\sf
+\noindent\textbf{Extract from \emph{Royal Society Open Science\/} author guidelines} \\
+--- It is a condition of publication that authors make the primary data, materials (such as statistical tools, protocols, software) and code publicly available. These must be provided at the point of submission for our Editors and reviewers for peer-review, and then made publicly available at acceptance. [\ldots] As a minimum, sufficient information and data are required to allow others to replicate all study findings reported in the article. Data and code should be deposited in a form that will allow maximum reuse. As part of our open data policy, we ask that data and code are hosted in a public, recognized repository, with an open licence (CC0 or CC-BY) clearly visible on the landing page of your dataset.}
+
+\specifyurl
+\url{royalsociety.org/journals/authors/author-guidelines/#data}
+\specifyurletc{Accessed 29 July 2020; the policy has been revised (undated, but accessed 2 February 2022) but retains the same principles; full policy now available via a DOI \cite{RS-policy}. The policy still retains an emphasis on data accessibility, and continues a lack of awareness that code and data are equivalent and often mixed (see section \ref{on-code-data-publication}).}
+
+\noindent\textbf{Extract from \emph{Nature Digital Medicine\/} author guidelines}\\
+{\sf --- A condition of publication in a Nature Research journal is that authors are required to make materials, data, code, and associated protocols promptly available to readers without undue qualifications. [\ldots] A condition of publication in a Nature Research journal is that authors are required to make unique materials promptly available to others without undue qualifications.}
+
+\specifyurl
+\url{www.nature.com/nature-research/editorial-policies/reporting-standards#availability-of-data}
+\specifyurletc{Accessed 29 July 2020; since updated to require [in part] ``Upon publication, Nature Portfolio journals consider it best practice to release custom computer code in a way that allows readers to repeat the published results. Code should be deposited in a DOI-minting repository such as Zenodo, Gigantum or Code Ocean and cited in the reference list following the guidelines described here.'' (accessed 2 February 2022).
+}
+
+\noindent\textbf{\emph{Lancet Digital Health\/} author guidelines}\\
+Journal has detailed data policies, but no code policy.
+
+\specifyurl
+\url{marlin-prod.literatumonline.com/pb-assets/Lancet/authors/tldh-info-for-authors.pdf}
+\specifyurletc{Accessed 29 July 2020. Still no code policy (accessed 2 February 2022).}
+
+\noindent\textbf{Extract from \emph{Journal of Vascular Surgery\/} author guidelines}\\
+Journal has detailed data policies, but no code policy. While no \emph{Journal of Vascular Surgery\/} papers were surveyed, the following statement on data policies is relevant:
+
+\vskip 3mm \noindent {\sf --- The authors are required to produce the data on which the manuscript is based for examination by the Editors or their assignees, should they request it. [\ldots] The authors should consider including a footnote in the manuscript indicating their willingness to make the original data available to other investigators through electronic media to permit alternative analysis and/or inclusion in a meta-analysis.}
+\specifyurl
+\url{www.editorialmanager.com/jvs/account/JVS_Instructions%20for%20Authors2020.pdf}
+\specifyurletc{Accessed 29 July 2020. Policy unchanged when accessed 2 February 2022.}
+
 \label{data-methods-section}
-\highlightmysubsection{Assessment criteria and methods}\label{data-methods-subsection}
+\highlightmysubsection{Assessment criteria and methods}
+\label{data-methods-subsection}
 A survey sampled of recent papers that were published online in July 2020, accepted for publication after peer review in \the\numberOfJournals\ high-profile, highly competitive leading peer-reviewed journals, namely \journalBreakdown. Papers were selected from the journals' July 2020 new online listings where the paper's title implied that code had been used in the research. Commentary, correspondence and editorials were excluded. The sample represents what the editorial and the broader peer review community considers to be good practice. 
 
 The selection process will have certainly missed some papers that use code, but the criterion selects papers where the wording of the title indicates that the authors consider code to be a component of the scientific contribution. Indeed, all sampled papers used code in their research. Although there is unavoidable subjectivity in the paper evaluations and uncontrolled bias from using a single evaluator (the author of this paper), it is hoped that using a sample of \plural{\dataN}{paper} from \plural{\numberOfJournals}{diverse journal} is sufficient to randomize errors so that they largely cancel out, and the overall trends as discussed in this paper are reliable. It should be noted that, except where a paper provides a URL to a code repository, much code was disorganized so possibly not all code was reviewed because it was too hard to find (some emails to authors have not been responded to). 
@@ -650,7 +884,7 @@ Additionally, errors can be the result of human slips, such as accidentally dele
 To protect against version, portability and other problems, the Github repository for the present paper includes a check on software versions and a checksum check for all possibly affected files, including the data file. This does not solve the problem, but it ensures anyone developing or reproducing the paper's work will at least be forewarned of potential version or portability problems. The Github repository itself can be used to restore files that have been corrupted.
 
 \highlightmysubsection{Problems of restrictive journal policies}
-\label{restrictive-policies}
+\globalLabel{restrictive-policies}
 Automatically generated variables are used throughout the paper and this \supplement.
 As usual, \LaTeX\ detects any spelling errors in the use of variables, thus helping protect the paper against typos that could otherwise mislead the paper's readers. Conveniently, \LaTeX\ also supports sophisticated calculations itself \cite{latex-calculus}, so the typeset paper can use any variable values in further calculations without going back to modify the data source file (in the present case, \texttt{data.js}). In practice this enables the author to avoid copying-and-pasting values from a data source or calculator, and then overlooking keeping them up to date with changes to the data or formula required.
 
@@ -661,61 +895,12 @@ At the time of cloning and checking all repositories in \clonewhen, paper \csnam
 
 Of course, the data generation process itself checks that this surprising statement remains valid, and provides a warning if the wording may need revising.
 
-Unfortunately, although using generated variables and analyses from a paper's data is a very simple technique to help make published papers more reliable, some journals and preprint servers (such as \emph{IEEE Transactions on Software Engineering}, \emph{PLOS ONE}, and \emph{arXiv\/}) do not permit papers to be submitted using \LaTeX\ source code that uses the standard \texttt{\textbackslash input}, \texttt{\textbackslash bibliography}, and other related commands. Typically they also do not support running any data collection or analysis either (which the present paper does when it clones repositories). 
+Unfortunately, although using generated variables and analyses from a paper's data is a very simple technique to help make published papers more reliable, some journals and preprint servers (such as \emph{IEEE Transactions on Software Engineering}, \emph{PLOS ONE}, and \emph{arXiv\/}) do not permit papers to be submitted using \LaTeX\ source code that uses the standard \texttt{\textbackslash input}, \texttt{\textbackslash bibliography}, and other related commands. Typically they also do not support running any data collection or analysis either (which the present paper does when it clones repositories). These policies undermine the drive towards RAP and \RAPstarp.
 
 Another program (\texttt{expand.js}) was therefore written to recursively expand included files so the expanded version can be submitted adhering to any such restrictive policy. Of course, the expanded version now contains all variables as fixed constants, so the submitted paper is misleading and useless to other researchers if the data is modified --- the effort to ensure all published numbers are automatically correct is defeated. Such restrictive publishing policies undermine reproducibility.
 \end{change}
 
-\highlightmysubsection{Code policies of sampled journals}
-\globalLabel{supplementary-journal-policies-section}
-
-It is noteworthy that none of the journals sampled permit any reliable style of managing data in published papers, such as described above in sections \ref{detecting-against-error} and \ref{restrictive-policies}. In particular, for all the papers that had accessible code, the code included explicit (and relevant) data that was not archived \emph{as\/} data in the journal repositories.
-\\
-
-\newdimen\tabwidth
-\tabwidth=\textwidth
-\advance \tabwidth by -4em
-\def\specifyurl{\vskip 3mm
-\begingroup\raggedleft\scriptsize
-} 
-\def\specifyurletc#1{\endgroup\\
-\hbox{ }\hfill\begin{change}\begin{tabular}{|p{\tabwidth}@{}}
-#1
-\end{tabular}\end{change}\vskip .3cm
-}
-
-{\sf
-\noindent\textbf{Extract from \emph{Royal Society Open Science\/} author guidelines} \\
---- It is a condition of publication that authors make the primary data, materials (such as statistical tools, protocols, software) and code publicly available. These must be provided at the point of submission for our Editors and reviewers for peer-review, and then made publicly available at acceptance. [\ldots] As a minimum, sufficient information and data are required to allow others to replicate all study findings reported in the article. Data and code should be deposited in a form that will allow maximum reuse. As part of our open data policy, we ask that data and code are hosted in a public, recognized repository, with an open licence (CC0 or CC-BY) clearly visible on the landing page of your dataset.}
-
-\specifyurl
-\url{royalsociety.org/journals/authors/author-guidelines/#data}
-\specifyurletc{Accessed 29 July 2020; the policy has been revised (undated, but accessed 2 February 2022) but retains the same principles; full policy now available via a DOI \cite{RS-policy}. The policy still retains an emphasis on data accessibility, and continues a lack of awareness that code and data are equivalent and often mixed (see section \ref{on-code-data-publication}).}
-
-\noindent\textbf{Extract from \emph{Nature Digital Medicine\/} author guidelines}\\
-{\sf --- A condition of publication in a Nature Research journal is that authors are required to make materials, data, code, and associated protocols promptly available to readers without undue qualifications. [\ldots] A condition of publication in a Nature Research journal is that authors are required to make unique materials promptly available to others without undue qualifications.}
-
-\specifyurl
-\url{www.nature.com/nature-research/editorial-policies/reporting-standards#availability-of-data}
-\specifyurletc{Accessed 29 July 2020; since updated to require [in part] ``Upon publication, Nature Portfolio journals consider it best practice to release custom computer code in a way that allows readers to repeat the published results. Code should be deposited in a DOI-minting repository such as Zenodo, Gigantum or Code Ocean and cited in the reference list following the guidelines described here.'' (accessed 2 February 2022).
-}
-
-\noindent\textbf{\emph{Lancet Digital Health\/} author guidelines}\\
-Journal has detailed data policies, but no code policy.
-
-\specifyurl
-\url{marlin-prod.literatumonline.com/pb-assets/Lancet/authors/tldh-info-for-authors.pdf}
-\specifyurletc{Accessed 29 July 2020. Still no code policy (accessed 2 February 2022).}
-
-\noindent\textbf{Extract from \emph{Journal of Vascular Surgery\/} author guidelines}\\
-Journal has detailed data policies, but no code policy. While no \emph{Journal of Vascular Surgery\/} papers were surveyed, the following statement on data policies is relevant for section \ref{jvs-policy} in the main paper:
-
-\vskip 3mm \noindent {\sf --- The authors are required to produce the data on which the manuscript is based for examination by the Editors or their assignees, should they request it. [\ldots] The authors should consider including a footnote in the manuscript indicating their willingness to make the original data available to other investigators through electronic media to permit alternative analysis and/or inclusion in a meta-analysis.}
-\specifyurl
-\url{www.editorialmanager.com/jvs/account/JVS_Instructions%20for%20Authors2020.pdf}
-\specifyurletc{Accessed 29 July 2020. Policy unchanged when accessed 2 February 2022.}
-
-\highlightmysubsection{Sample assessments and criteria}
+\highlightmysubsection{Sample assessment and scoring}
 
 \def\flagStyle#1{\textcolor{blue}{\sf #1}}
 
@@ -726,32 +911,22 @@ Assessment flags are \flagStyle{highlighted in color} to be clearer in the follo
 Legend:\\
 \input generated-legend.tex
 
-\newpage
+%\newpage
 
 {
 \def\citenum#1{\cite{#1}}
-\begin{longtable}{@{}cp{2.25in}p{2.25in}@{}}
+\begin{longtable}{@{}cp{2.8in}p{2.8in}@{}}
 \sf\bfseries Ref&\sf\bfseries Data&\sf\bfseries Code \\ \hline \endhead 
 \input generated-assessments.tex
 \end{longtable}
 }
-
-\highlightmysubsection{Summary of assessments}
-
-\immediate\write\infofile{\bslash newlabel{supplementary-summary-table}{{\arabic{section}}{\thepage}{DUMMY1}{DUMMY2}{DUMMY3}}}
-
-\begin{center}
-\input generated-summary-table.tex
-\end{center}
-
-This is exactly the same table as table \ref{table-summary} from the main paper, reproduced here for convenience. See section \ref{data-methods-subsection} in this \supplement\ for details of the process that generated it.
 
 \stepcounter{subsection}
 \def\reftitle{References for sampled papers}
 \def\unnumberedrefname{{\reftitle}}
 \renewcommand\refname{\subsectioncounter\ {\unnumberedrefname}}
 
-\initialiseBibliography{{\alph{subsection} \reftitle}}{\the\bibciten}{} 
+\initialiseBibliography{(\arabic{section}.{\alph{subsection}) \reftitle}}{\the\bibciten}{} 
 
 \begin{thebibliography}{999}
 \subsectioncontents{\unnumberedrefname}

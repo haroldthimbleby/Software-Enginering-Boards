@@ -1,53 +1,223 @@
 This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper-seb-main.aux
-The style file: plos2015.bst
+The style file: mysiam.bst
 Database file #1: paper-seb-main.bib
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--empty pages in redmill
-Warning--empty author in iec61508
-You've used 79 entries,
-            3058 wiz_defined-function locations,
-            1115 strings with 23270 characters,
-and the built_in function-call counts, 136768 in all, are:
-= -- 17148
-> -- 835
-< -- 10
-+ -- 647
-- -- 207
-* -- 11868
-:= -- 15198
-add.period$ -- 339
-call.type$ -- 79
-change.case$ -- 8
-chr.to.int$ -- 18
-cite$ -- 81
-duplicate$ -- 9559
-empty$ -- 13353
-format.name$ -- 244
-if$ -- 31665
+ptr=1, stack=
+{\em Nature}
+---the literal stack isn't empty for entry nature-summary
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{11}
+{\em Frontiers in Neuroinformatics}
+---the literal stack isn't empty for entry reproducibility
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{11}
+{\em Computing in Science {\&} Engineering}
+---the literal stack isn't empty for entry assessing-quality-conference
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em Nature}
+---the literal stack isn't empty for entry thumbs-up
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em Nature}
+---the literal stack isn't empty for entry avianFluModel
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em Nature}
+---the literal stack isn't empty for entry originalICmodel
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{17}
+{\em Computing in Science {\&} Engineering}
+---the literal stack isn't empty for entry open-source
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{13}
+{\em PLOS Biology}
+---the literal stack isn't empty for entry preclinical-reproducibility
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{14}
+{\em ACM Transactions on Information Systems}
+---the literal stack isn't empty for entry se-bias
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em Procedia Computer Science}
+---the literal stack isn't empty for entry Executable-Paper
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{16}
+{\em Perspectives on Psychological Science}
+---the literal stack isn't empty for entry psychological-modeling
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{27}
+{\em BMJ Health {\&} Care Informatics}
+---the literal stack isn't empty for entry assurance-case
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{105}
+{\em Proceedings of the National Academy of Sciences}
+---the literal stack isn't empty for entry nvp-ferguson
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{20}
+{\em IEEE Transactions on Software Engineering}
+---the literal stack isn't empty for entry NVP
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{347}
+{\em Science}
+---the literal stack isn't empty for entry science-review
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{15}
+{\em Computing in Science {\&} Engineering}
+---the literal stack isn't empty for entry basic-reproducibilty
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{12}
+{\em Communications of the ACM}
+---the literal stack isn't empty for entry hoare
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{9}
+{\em F1000Research}
+---the literal stack isn't empty for entry cite-code
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{368}
+{\em Science}
+---the literal stack isn't empty for entry unfinished
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em Digital Evidence and Electronic Signature Law Review}
+---the literal stack isn't empty for entry ourReview
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{162}
+{\em Annals of Internal Medicine}
+---the literal stack isn't empty for entry tripod
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{10}
+{\em Systematic Reviews}
+---the literal stack isn't empty for entry prisma
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em Nature}
+---the literal stack isn't empty for entry nature-review
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{3}
+{\em Nature Digital Medicine}
+---the literal stack isn't empty for entry example-stats
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{12}
+{\em Value Health}
+---the literal stack isn't empty for entry flu-model
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em BMJ}
+---the literal stack isn't empty for entry critiques
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{11}
+{\em PLoS Computational Biology}
+---the literal stack isn't empty for entry notebooks
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{113}
+{\em Proceedings National Academy of Sciences}
+---the literal stack isn't empty for entry Ben
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{27}
+{\em ACM Transactions on Software Engineering and Methodology}
+---the literal stack isn't empty for entry ABCs-SE
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{22}
+{\em Computational Linguistics}
+---the literal stack isn't empty for entry thimbleby-landauer
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{371}
+{\em BMJ}
+---the literal stack isn't empty for entry excel-fiasco
+while executing---line 1089 of file mysiam.bst
+Warning--there's a number but no series in my-parliamentary-evidence
+ptr=1, stack=
+{\em Science of Computer Programming}
+---the literal stack isn't empty for entry relit
+while executing---line 1089 of file mysiam.bst
+ptr=1, stack=
+{\em BMC Medicine}
+---the literal stack isn't empty for entry whitty
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{3}
+{\em Scientific Data}
+---the literal stack isn't empty for entry fair
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{41}
+{\em ACM Computing Surveys}
+---the literal stack isn't empty for entry cbc
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{369}
+{\em BMJ}
+---the literal stack isn't empty for entry diagnosis-reviews
+while executing---line 1089 of file mysiam.bst
+ptr=2, stack=
+ \textbf{9}
+{\em Nature Scientific Reports}
+---the literal stack isn't empty for entry pseudo
+while executing---line 1089 of file mysiam.bst
+You've used 70 entries,
+            2150 wiz_defined-function locations,
+            968 strings with 20902 characters,
+and the built_in function-call counts, 28624 in all, are:
+= -- 2501
+> -- 1943
+< -- 0
++ -- 796
+- -- 710
+* -- 2646
+:= -- 4720
+add.period$ -- 132
+call.type$ -- 70
+change.case$ -- 552
+chr.to.int$ -- 0
+cite$ -- 71
+duplicate$ -- 1055
+empty$ -- 1811
+format.name$ -- 710
+if$ -- 5759
 int.to.chr$ -- 0
-int.to.str$ -- 79
-missing$ -- 615
-newline$ -- 440
-num.names$ -- 78
-pop$ -- 1037
+int.to.str$ -- 70
+missing$ -- 80
+newline$ -- 275
+num.names$ -- 134
+pop$ -- 611
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 498
 quote$ -- 0
-skip$ -- 1130
+skip$ -- 742
 stack$ -- 0
-substring$ -- 28993
-swap$ -- 1483
-text.length$ -- 4
+substring$ -- 1154
+swap$ -- 364
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 2
-while$ -- 624
-width$ -- 81
-write$ -- 942
-(There were 2 warnings)
+type$ -- 244
+warning$ -- 1
+while$ -- 216
+width$ -- 72
+write$ -- 686
+(There were 37 error messages)
