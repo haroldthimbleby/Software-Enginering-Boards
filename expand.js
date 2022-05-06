@@ -26,8 +26,9 @@ function saveFile(fileName, string) {
 }
 
 function getFile(file) {
+	file = file.trim();
     try {
-        return fs.readFileSync(file, 'utf8');
+        return fs.readFileSync(file, {encoding:'utf8', flag:'r'});
     } catch (err) {
         console.log("** Can't read file " + file + " - " + err);
         return "\\error couldn't read " + file + "\n";
@@ -36,11 +37,14 @@ function getFile(file) {
 
 var re = RegExp("\\\\input (.*)\n", "g"), rebib=RegExp("\\\\bibliography{(.*).bib}");
 
-var bufferExpand, bufferInsert;
+var bufferExpand, bufferInsert, auxfile;
 
 for (var i = 0; i < TeXFiles.length; i++) {
     console.log("Recursively expand all \\input and \\bibliography macro calls in " + TeXFiles[i]);
-    bufferExpand = getFile(TeXFiles[i]); // puts in buffer
+    auxfile = TeXFiles[i].replace(/.tex/, ".aux");
+    console.log("        \\input " + auxfile + " (automatically pre-inserted between \\makeatletter and \\makeatother)");
+    bufferExpand = "\\makeatletter\n"+getFile(auxfile) + "\n\\makeatother\n";
+    bufferExpand = bufferExpand + getFile(TeXFiles[i]); // puts in buffer
     var replaced;
     do {
         replaced = false;
@@ -52,7 +56,7 @@ for (var i = 0; i < TeXFiles.length; i++) {
         });
         bufferExpand = bufferExpand.replace(rebib, function (match, filename) {
         	replaced = true;
-            console.log("      * \\bibliography{"+filename+".bib} replaced with " + filename+".bbl");
+            console.log("      * \\bibliography{"+filename+".bib} (replaced with " + filename+".bbl)");
             bufferInsert = getFile(filename+".bbl");
             return "% expand bibliography " + filename + ".bbl\n" + bufferInsert + "\n% end expanding bibliography " + filename + ".bbl\n";
         });
