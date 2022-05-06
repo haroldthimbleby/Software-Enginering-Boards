@@ -1,0 +1,53 @@
+# All data and files for the paper "Maturing the computational sciences"
+
+## Harold Thimbleby
+
+## [harold@thimbleby.net](mailto:harold@thimbleby.net)
+
+### 5 May 2022
+
+## Basics
+
+A PDF of the typeset paper and appendix is available at [`http://www.harold.thimbleby.net/reliable-models.pdf`](http://www.harold.thimbleby.net/reliable-models.pdf). It's also available in this repository.
+
+All data is defined and stored in human-readable JSON format in the file `data.js`
+
+For convenience, a CSV file is included in this Git repository. This may be more convenient to read than the JSON file.
+
+Everything works using `make`.
+
+## Overview
+
+First, here's a quick overview of how the system works behind the scenes inside `make`.
+
+To generate all data or typeset the paper, you will need a Unix system with: awk, bibtex, latex, make, node, sed, and zip (plus the usual rm, echo, etc). 
+
+The file `data.js` includes both the JSON data and a JavaScript program that checks the data, analyses it, and generates most of the various data files &mdash; the CSV file, lots of LaTeX files used in the paper, and others.
+
+Running `node data.js` will give you
+
+>       allData.csv - for accessing data in Excel and many other apps
+>       flagData.nb - for accessing data in Mathematica notebook
+>       data-check.html - a summary of papers and DOIs with any error messages (eg missing data), for easy review in a browser
+>       some shell scripts used to run Git to download clones of the survey papers' code repositories
+>    ... etc etc, plus a few tex files for including data in the Latex files
+ 
+It also lists all the files generated and their purpose. 
+
+However, it's better to use `make` than do things piecemeal ...
+
+## Using make
+
+Run `make` (with no parameters) to find out everything that you can do. 
+
+Here are all the available options:
+
+%replace%
+        
+## Further information
+
+For help or further information, please email [harold@thimbleby.net](mailto:harold@thimbleby.net)
+
+Web site [harold.thimbleby.net](http://www.harold.thimbleby.net)
+
+
